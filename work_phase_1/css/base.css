@@ -1,0 +1,7 @@
+
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-dark);
+    font-family: 'Urbanist', sans-serif;
+}
