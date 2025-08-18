@@ -5,60 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS Linking -->
-
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
 
-    <title>Components</title>
+    <title>Style Guide - Components</title>
   </head>
   <body>
+    <header></header>
     <div class="container">
-      <h1>Components</h1>
+      <h1>Style Guide</h1>
       <section>
-        <p>This page outlines the components used in the style guide.</p>
-        
-        <h3><strong>Buttons</strong></h3>
-        <ul>
-          <li>Padding:
-            <ul>
-              <li>Top/Bottom: 10px</li>
-              <li>Left/Right: 20px</li>
-            </ul>
-          </li>
-          <li>Styles:
-            <ul>
-              <li>Filled (solid background)</li>
-              <li>Outlined (border only)</li>
-              <li>Full-width button</li>
-              <li>Hover state: raised with shadow</li>
-            </ul>
-          </li>
-        </ul>
-
-        <hr>
-
-        <h3><strong>Card – Mobile</strong></h3>
-        <ul>
-          <li>Title spacing: 1.6rem from top</li>
-          <li>Horizontal padding: 1rem (left & right)</li>
-          <li>Button spacing: 1rem below text</li>
-        </ul>
-
-        <hr>
-
-        <h3><strong>Card – Desktop</strong></h3>
-        <ul>
-          <li>Title spacing: 1.6rem from top</li>
-          <li>Left padding: 3rem</li>
-          <li>Right padding: 2rem</li>
-          <li>Button positioned under text with consistent spacing</li>
-        </ul>
+        <h2>Components</h2>
+        <h3>Buttons</h3>
+        <p>
+          This is a showcase of the different button styles available in our
+          design system.
+        </p>
+        <div class="card-container">
+          <div class="simple-card">
+            <h4>Primary Button</h4>
+            <button class="button button-primary">Primary</button>
+          </div>
+          <div class="simple-card">
+            <h4>Secondary Button</h4>
+            <button class="button button-secondary">Secondary</button>
+          </div>
+          <div class="simple-card">
+            <h4>Dark Button</h4>
+            <button class="button button-dark">Dark</button>
+          </div>
+          <div class="simple-card">
+            <h4>Bright Button</h4>
+            <button class="button button-bright">Bright</button>
+          </div>
+        </div>
       </section>
       <section>
-        <a href="index.html">Work Phase 1 Home</a>
+        <h2>Links</h2>
+        <a class="button button-bright" href="index.html">WP1 Home</a>
+        <a class="button button-secondary" href="typography.html"
+          >Style Guide - Typography</a
+        >
       </section>
+    </div>
+
+    <!-- Temperature Widget Container -->
+    <div id="temperature-widget" class="temperature-widget">
+      <p>Current Temperature: <span id="temperature-value">--
+    </span>°C</p>
     </div>
     <!-- Linking External JavaScript -->
     <script type="module" src="js/components.js"></script>
