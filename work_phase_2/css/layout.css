@@ -1,0 +1,16 @@
+/* Mobile Layout (default) */
+.container {
+    height: 100vh;
+    width: 80vw;
+    margin: 0 10vw;
+    padding: var(--space-container-padding);
+    background-color: var(--color-background);
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+    .container {
+        width: 60vw;
+        margin: 0 20vw;
+    }
+}
