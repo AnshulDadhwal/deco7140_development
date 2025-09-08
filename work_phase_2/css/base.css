@@ -1,72 +1,72 @@
 /* Import Google Fonts - Nunito */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 /* CSS Custom Properties (Variables) */
 :root {
-    /* Color Scheme */
-    --color-primary: #2c3e50; /* Dark Blue */
-    --color-secondary: #3498db; /* Bright Blue */
-    --color-accent: #e74c3c; /* Red */
-    --color-text: #333; /* Dark Grey */
-    --color-background: #f5f5f5; /* Light Grey */
-    
-    /* Typography */
-    --font-family-primary: 'Nunito', sans-serif;
-    --font-size-h1: 4.2rem;
-    --font-size-h2: 2.6rem;
-    --font-size-h3: 1.6rem;
-    --line-height-base: 1.6;
+  /* Color Scheme */
+  --color-primary: #2c3e50; /* Dark Blue */
+  --color-secondary: #3498db; /* Bright Blue */
+  --color-accent: #e74c3c; /* Red */
+  --color-text: #333; /* Dark Grey */
+  --color-background: #f5f5f5; /* Light Grey */
 
-    /* Spacing */
-    --space-heading-above: 1.5rem;
-    --space-heading-below: 0.75rem;
-    --space-paragraph-bottom: 1.6rem;
-    --space-container-padding: 1rem;
-    --space-section-between: 2rem;
+  /* Typography */
+  --font-family-primary: "Nunito", sans-serif;
+  --font-size-h1: 4.2rem;
+  --font-size-h2: 2.6rem;
+  --font-size-h3: 1.6rem;
+  --line-height-base: 1.6;
+
+  /* Spacing */
+  --space-heading-above: 1.5rem;
+  --space-heading-below: 0.75rem;
+  --space-paragraph-bottom: 1.6rem;
+  --space-container-padding: 1rem;
+  --space-section-between: 2rem;
 }
 
 body {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    font-family: var(--font-family-primary);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family-primary);
 }
 
 /* Typography Styles */
 h1 {
-    font-size: var(--font-size-h1);
-    color: var(--color-primary);
-    margin-top: var(--space-heading-above);
-    margin-bottom: var(--space-heading-below);
+  font-size: var(--font-size-h1);
+  color: var(--color-primary);
+  margin-top: var(--space-heading-above);
+  margin-bottom: var(--space-heading-below);
 }
 
 h2 {
-    font-size: var(--font-size-h2);
-    margin-top: var(--space-heading-above);
-    margin-bottom: var(--space-heading-below);
+  font-size: var(--font-size-h2);
+  margin-top: var(--space-heading-above);
+  margin-bottom: var(--space-heading-below);
 }
 
 h3 {
-    font-size: var(--font-size-h3);
-    margin-top: var(--space-heading-above);
-    margin-bottom: var(--space-heading-below);
+  font-size: var(--font-size-h3);
+  margin-top: var(--space-heading-above);
+  margin-bottom: var(--space-heading-below);
 }
 
 p {
-    font-size: 1rem;
-    line-height: var(--line-height-base);
-    color: var(--color-text);
+  font-size: 1rem;
+  line-height: var(--line-height-base);
+  color: var(--color-text);
 }
 
 p {
-    margin-bottom: var(--space-paragraph-bottom);
+  margin-bottom: var(--space-paragraph-bottom);
 }
 
 /* Between Section Spacing */
 section {
-    margin-bottom: var(--space-section-between);
+  margin-bottom: var(--space-section-between);
 }
 
 /* Inside Container Padding */
 .container {
-    padding: var(--space-container-padding);
+  padding: var(--space-container-padding);
 }
