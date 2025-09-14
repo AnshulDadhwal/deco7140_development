@@ -128,20 +128,6 @@ hr {
   border-top: 1px solid;
 }
 
-/* Animation and transition resets */
-*,
-*::before,
-*::after {
-  animation-duration: 0s !important;
-  animation-delay: 0s !important;
-  animation-iteration-count: 1 !important;
-  animation-fill-mode: none !important;
-  animation-play-state: paused !important;
-  transition-duration: 0s !important;
-  transition-delay: 0s !important;
-  transform: none !important;
-}
-
 /* Remove focus outlines (add custom ones as needed) */
 :focus {
   outline: none;
