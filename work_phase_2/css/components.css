@@ -171,7 +171,7 @@
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  color: var(--color-accent);
+  color: var(--color-text);
 }
 
 .response {
@@ -185,7 +185,7 @@
 
 .interactive-highlight-stories {
   position: relative;
-  background-color: rgba(52, 152, 219, 0.25); /* blue highlight */
+  background-color: rgba(255, 215, 0, 0.3); /* yellow highlight with 30% opacity */
   cursor: pointer;
   padding: 2px 5px;
   border-radius: 5px;
@@ -197,7 +197,7 @@
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--color-accent);
+  background: var(--color-secondary);
   color: white;
   font-size: 0.8rem;
   font-weight: bold;
