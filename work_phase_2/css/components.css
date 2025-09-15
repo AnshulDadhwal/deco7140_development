@@ -141,3 +141,92 @@
 .flip-card:active .flip-card-inner {
     transform: rotateY(180deg);
 }
+
+
+/* INTERVIEW STYLING */
+.interview {
+  border: 1px solid var(--color-secondary);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background-color: white;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+}
+
+.user-name {
+  font-weight: bold;
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.initial-prompt {
+  font-style: italic;
+  color: var(--color-text);
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.question {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+}
+
+.response {
+  border-left: 3px solid var(--color-secondary);
+  background-color: color-mix(in srgb, var(--color-secondary) 10%, transparent);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.interactive-highlight-stories {
+  position: relative;
+  background-color: rgba(52, 152, 219, 0.25); /* blue highlight */
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.interactive-highlight-stories::after {
+  content: attr(data-userstory);
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-accent);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: normal;
+  width: 220px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Show Tooltip on Hover */
+@media (hover: hover) {
+  .interactive-highlight-stories:hover::after {
+    opacity: 1;
+  }
+}
+
+/* Show Tooltip on Tap (Mobile) */
+.interactive-highlight-stories:focus::after,
+.interactive-highlight-stories:active::after {
+  opacity: 1;
+}
+
+.user-story-box {
+  border: 2px solid var(--color-primary);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: var(--color-background);
+}
