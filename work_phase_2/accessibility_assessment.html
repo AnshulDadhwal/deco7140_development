@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS Linking -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
@@ -11,14 +10,34 @@
     <title>Work Phase 2 - Accessibility Assessment</title>
   </head>
   <body>
-    <header>
-      <h1>Accessibility Assessment</h1>
-    </header>
-    <section>
-      <h2>What's in this website?</h2>
-      <p>
-        Talks about accessibility considerations for the design research phase of my work. This would entail the ARIA and 
-      </p>
-    </section>
+    <nav role="navigation" aria-label="Main navigation">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">
+        ☰ Menu
+      </button>
+      <ul id="main-menu">
+        <li><a href="index.html" aria-label="Home page">Home</a></li>
+        <li><a href="client_needs_analysis.html" aria-label="Client needs analysis">Client Needs</a></li>
+        <li><a href="user_stories.html" aria-label="User stories and interviews">User Stories</a></li>
+        <li><a href="accessibility_assessment.html" aria-label="Accessibility assessment">Accessibility</a></li>
+        <li><a href="ethics_analysis.html" aria-label="Ethics">Ethics</a></li>
+        <li><a href="genai_mt_acknowledgement.html" aria-label="GenAI acknowledgement">GenAI Acknowledgement</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <header>
+        <h1>Accessibility Assessment</h1>
+      </header>
+      <main>
+        <section>
+          <h2>What's in this website?</h2>
+          <p>
+            Talks about accessibility considerations for the design research phase of my work. This would entail the ARIA and 
+            other accessibility features implemented throughout the website.
+          </p>
+        </section>
+      </main>
+    </div>
+    <!-- Linking External JavaScript -->
+    <script type="module" src="js/accessibility.js"></script>
   </body>
 </html>

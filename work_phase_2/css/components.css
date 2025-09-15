@@ -144,6 +144,7 @@
 
 
 /* INTERVIEW STYLING */
+/* Interview Container */
 .interview {
   border: 1px solid var(--color-secondary);
   border-radius: 8px;
@@ -153,6 +154,7 @@
   box-shadow: 2px 2px 6px rgba(0,0,0,0.05);
 }
 
+/* User Name Styling */
 .user-name {
   font-weight: bold;
   color: var(--color-primary);
@@ -160,6 +162,7 @@
   margin-bottom: 0.5rem;
 }
 
+/* Initial Prompt Styling */
 .initial-prompt {
   font-style: italic;
   color: var(--color-text);
@@ -167,6 +170,7 @@
   margin-bottom: 1rem;
 }
 
+/* Question and Response Styling */
 .question {
   font-weight: bold;
   margin-top: 1rem;
@@ -174,6 +178,7 @@
   color: var(--color-text);
 }
 
+/* Response Styling */
 .response {
   border-left: 3px solid var(--color-secondary);
   background-color: color-mix(in srgb, var(--color-secondary) 10%, transparent);
@@ -183,6 +188,8 @@
   font-style: italic;
 }
 
+/* USER STORIES STYLING */
+/* Base Highlight Style */
 .interactive-highlight-stories {
   position: relative;
   background-color: rgba(255, 215, 0, 0.3); /* yellow highlight with 30% opacity */
@@ -192,6 +199,7 @@
   transition: background 0.3s ease;
 }
 
+/* Tooltip Styling for User Stories */
 .interactive-highlight-stories::after {
   content: attr(data-userstory);
   position: absolute;
@@ -223,10 +231,109 @@
   opacity: 1;
 }
 
+/* User Story Box Styling */
 .user-story-box {
   border: 2px solid var(--color-primary);
   border-radius: 10px;
   padding: 1rem;
   margin: 1rem 0;
   background: var(--color-background);
+}
+
+
+/* NAVIGATION MENU STYLES */
+/* Navigation Container */
+nav {
+    background: var(--color-primary);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Menu Toggle Button (Mobile) */
+.menu-toggle {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for toggle button */
+.menu-toggle:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Navigation List */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* Hidden by default on mobile */
+}
+
+/* Show menu when toggled open on mobile */
+nav.menu-open ul {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Links */
+nav a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Current page highlighting */
+nav a[aria-current="page"] {
+    background-color: var(--color-secondary);
+    font-weight: bold;
+}
+
+/* Remove border from last item */
+nav li:last-child a {
+    border-bottom: none;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    /* Hide toggle button on desktop */
+    .menu-toggle {
+        display: none;
+    }
+    
+    /* Show navigation horizontally on desktop */
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    /* Adjust links for horizontal layout */
+    nav a {
+        border-bottom: none;
+        border-right: 1px solid rgba(255,255,255,0.2);
+        white-space: nowrap;
+    }
+    
+    nav li:last-child a {
+        border-right: none;
+    }
+    
+    /* Hover effects for desktop */
+    nav a:hover,
+    nav a:focus {
+        background-color: var(--color-secondary);
+    }
 }
