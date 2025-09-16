@@ -25,15 +25,78 @@
         <li><a href="genai_mt_acknowledgement.html" aria-label="GenAI acknowledgement">GenAI Acknowledgement</a></li>
       </ul>
     </nav>
+
     <!-- Main Content -->
     <div class="container">
       <header>
         <h1>Ethics Analysis</h1>
       </header>
+
       <section>
-        <h2>What's in this website?</h2>
+        <h2>Potential Harms</h2>
         <p>
-          Talks about the ethical considerations for the design research phase of my work.
+          The newsletter subscription feature poses multiple risks:
+        </p>
+        <ul class="ethics-list">
+          <li><strong>Privacy violation:</strong> Collecting sexuality, income, and credit card data exceeds normal expectations for a newsletter sign-up, exposing users to potential misuse or profiling.</li>
+          <li><strong>Discrimination and exclusion:</strong> Sensitive data could be repurposed, leading to stereotyping or targeted exploitation.</li>
+          <li><strong>Trust erosion:</strong> Communities already cautious about data collection (as shown in user stories where Chen and Luca reviewed plug-ins and data usage before subscribing) may avoid engaging with the website altogether.</li>
+          <li><strong>Security risks:</strong> If breached, the dataset could cause financial harm, outing of sexuality or gender, or reputational damage to users.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>ACS Values and Principles</h2>
+
+        <div class="ethics-card">
+          <h3>Harm 1: Privacy Violation</h3>
+          <p class="principles"><strong>Relevant Principles:</strong><br>
+            Trustworthiness (2.2d): Respect privacy, confidentiality, and integrity of personal information.<br>
+            Respect for Others (2.3.1a & f): Minimise harm and mitigate risks associated with their work.
+          </p>
+          <p><strong>Ethical Solution:</strong> Only essential details (e.g., name and email) should be collected. Sensitive data should be avoided or made optional with clear explanations and informed consent.</p>
+        </div>
+
+        <div class="ethics-card">
+          <h3>Harm 2: Discrimination and Exclusion</h3>
+          <p class="principles"><strong>Relevant Principles:</strong><br>
+            Respect for Others (2.3.1c & d): Requires impartiality, fairness, and inclusivity in system design.<br>
+            Respect for the Profession (2.3.2c): Stresses defending the public interest and enhancing quality of life.
+          </p>
+          <p><strong>Ethical Solution:</strong> Remove mandatory fields that could lead to exclusion, and ensure inclusivity by designing sign-up processes that treat all users equitably.</p>
+        </div>
+
+        <div class="ethics-card">
+          <h3>Harm 3: Trust Erosion</h3>
+          <p class="principles"><strong>Relevant Principles:</strong><br>
+            Honesty (2.1a & b): Requires transparency and openness about how data is used.<br>
+            Trustworthiness (2.2a & b): Requires accountability, integrity, and avoidance of undue influence.
+          </p>
+          <p><strong>Ethical Solution:</strong> Provide transparent, plain-language explanations of why data is collected and how it is used, ensuring users can make informed choices.</p>
+        </div>
+
+        <div class="ethics-card">
+          <h3>Harm 4: Security Risks</h3>
+          <p class="principles"><strong>Relevant Principles:</strong><br>
+            Trustworthiness (2.2h): Requires developing robust, secure, and user-friendly systems.<br>
+            Respect for Others (2.3.1a & f): Requires minimising harm and mitigating risks.
+          </p>
+          <p><strong>Ethical Solution:</strong> If sensitive data must be collected, implement strong encryption, limit retention, and ensure compliance with best security practices; ideally, redesign the system to reduce data collection altogether.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Navigating Tensions</h2>
+        <p>
+          The client’s funder expects detailed demographic data, but users expect privacy and safe participation. This creates a tension between client obligations and ethical design. Options include:
+        </p>
+        <ol class="ethics-list">
+          <li>Propose a privacy-preserving version of the plug-in where only essential fields are required, and other fields are clearly optional.</li>
+          <li>Offer alternative data collection methods (e.g., anonymous, aggregated surveys) that still give funders insights without individual profiling.</li>
+          <li>Provide user control and consent, allowing opt-in for specific categories of data.</li>
+        </ol>
+        <p>
+          By presenting these options, the design team shows respect for the client’s goals while prioritising community trust and aligning with ACS’s principle of public interest.
         </p>
       </section>
     </div>
