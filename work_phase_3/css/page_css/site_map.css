@@ -1,0 +1,40 @@
+/* SITE MAP PAGE - Specific styling for site_map.html */
+
+/* Style the main level accordion headers */
+.accordion-header {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.accordion-header:hover {
+  opacity: 0.9;
+}
+
+/* Style nested accordion headers differently */
+.accordion.nested .accordion-header {
+  background-color: var(--color-secondary);
+  color: white;
+  border: 1px solid var(--color-secondary);
+  border-radius: 10px 10px 0 0;
+  font-size: 0.9rem;
+}
+
+.accordion.nested .accordion-content {
+  color: var(--text-color);
+  border: 1px solid var(--color-secondary);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Third level nested accordion */
+.accordion.nested .accordion.nested .accordion-header {
+  background-color: #f0f0f0;
+  color: var(--text-color);
+  border: 1px solid #ddd;
+  font-size: 0.85rem;
+}
+
+.accordion.nested .accordion.nested .accordion-content {
+  border: 1px solid #ddd;
+  border-top: none;
+}

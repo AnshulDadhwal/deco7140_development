@@ -1,3 +1,5 @@
+@import './component_skeletons/accordion.css';
+
 /* MENUS */
 /* Base styles - Common to both mobile and desktop */
 nav ul {
@@ -74,4 +76,11 @@ nav ul {
   #nav-mobile {
     display: none;
   }
+}
+
+/* Responsive image utility */
+.responsive-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
