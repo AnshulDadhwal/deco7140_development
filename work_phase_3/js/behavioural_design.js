@@ -46,7 +46,7 @@ function initializeFormSubmission() {
     // Required headers - REPLACE THESE WITH YOUR ACTUAL VALUES
     const { success, data } = await postFormData(form, apiEndpoint, {
       'student_number': 's4738601',
-      'uqcloud_zone_id': 'b9e6a7cc',
+      'uqcloud_zone_id': 'https://deco7140-b9e6a7cc.uqcloud.net',
     });
 
     if (success) {
