@@ -1,0 +1,119 @@
+/* Import skeleton components */
+@import url('../component_skeletons/gallery.css');
+@import url('../component_skeletons/viewer.css');
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #3498DB;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Color Palette Styles */
+.color-palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.color-swatch {
+  text-align: center;
+}
+
+.color-block {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.color-swatch h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.color-code {
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  color: #2C3E50;
+  margin-bottom: 0.5rem;
+}
+
+.color-usage {
+  font-size: 0.875rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Typography Showcase Styles */
+.typography-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.type-sample {
+  padding: 1.5rem;
+  border-left: 4px solid #3498DB;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.type-details {
+  font-size: 0.875rem;
+  color: #555;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.small-text {
+  font-size: 0.875rem;
+}
+
+/* Page-specific gallery customization */
+.gallery img {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gallery img:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Page-specific viewer customization */
+.viewer {
+  background: #f8f9fa;
+}
+
+#viewer-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+#viewer-caption {
+  background: white;
+  border-radius: 8px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 768px) {
+  .color-palette {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

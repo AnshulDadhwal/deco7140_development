@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/page_css/style_guide.css" />
   </head>
   <body>
     <!-- START: PAGE STRUCTURE -->
@@ -38,9 +39,6 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="site_map.html">Site Map</a></li>
         <li><a href="style_guide.html" aria-current="page">Style Guide</a></li>
-        <li><a href="visceral_design.html">Visceral Design</a></li>
-        <li><a href="behavioural_design.html">Behavioural Design</a></li>
-        <li><a href="reflective_design.html">Reflective Design</a></li>
         <li><a href="ethical_response.html">Ethical Response</a></li>
         <li><a href="genai_mt_acknowledgement.html">GenAI MT Acknowledgement</a></li>
       </ul>
@@ -50,15 +48,55 @@
       <div class="container">
         <header>
           <h1>Style Guide</h1>
-          <p class="m-y-4">A comprehensive overview of the visual design elements, typography, colors, and components used throughout the project.</p>
+          <p class="m-y-4">A comprehensive overview of the visual design elements, typography, colors, and components used throughout the project. This style guide presents our design proposal for CCI, demonstrating how our design decisions align with user needs and accessibility requirements identified in our research.</p>
         </header>
         
         <section>
-          <h2>Design System</h2>
-          <p>Content will go here soon.</p>
+          <h2>Design Levels</h2>
+          <p class="m-y-3">Our design approach follows Don Norman's three levels of design: Visceral, Behavioural, and Reflective. Each level addresses different aspects of user experience and emotional engagement.</p>
+
+          <!-- Card Container -->
+          <div class="card-container m-t-4">
+            
+            <!-- Visceral Design Card -->
+            <article class="card">
+              <h3>Visceral Design</h3>
+              <p>Explore the immediate visual impact through layouts, typography, and color schemes. These elements create the first impression and emotional response.</p>
+              <p class="card-highlight">Includes: Page layouts, color palette, typography system</p>
+              <a href="visceral_design.html" class="card-link">Learn more</a>
+            </article>
+
+            <!-- Behavioural Design Card -->
+            <article class="card">
+              <h3>Behavioural Design</h3>
+              <p>Discover the interactive elements and usability patterns that guide user behavior. These components ensure intuitive and efficient user interactions.</p>
+              <p class="card-highlight">Includes: Buttons, forms, navigation, micro-interactions</p>
+              <a href="behavioural_design.html" class="card-link">Learn more</a>
+            </article>
+
+            <!-- Reflective Design Card -->
+            <article class="card">
+              <h3>Reflective Design</h3>
+              <p>Understand how design creates meaning and builds lasting relationships. These choices reflect brand values and create emotional connections.</p>
+              <p class="card-highlight">Includes: Brand messaging, storytelling, emotional resonance</p>
+              <a href="reflective_design.html" class="card-link">Learn more</a>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="m-t-5">
+          <h2>Design Philosophy</h2>
+          <p>Our design proposal is grounded in the user research and client needs identified in our Design Research phase. Every design decision can be traced back to specific user stories, accessibility requirements, and business objectives.</p>
+          
+          <p class="m-t-3">Key principles guiding our design:</p>
+          <ul class="m-t-2">
+            <li><strong>Accessibility First:</strong> All designs meet WCAG 2.1 Level AA standards minimum</li>
+            <li><strong>Mobile-First Approach:</strong> Optimized for mobile devices with progressive enhancement for desktop</li>
+            <li><strong>User-Centered:</strong> Based on real user needs and behaviors documented in our research</li>
+            <li><strong>Brand Alignment:</strong> Reflects CCI's values and business objectives</li>
+          </ul>
         </section>
       </div>
     </main>
     <!-- END: PAGE STRUCTURE -->
-  </body>
-</html>
