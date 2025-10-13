@@ -1,0 +1,163 @@
+/* Behavioural design page styles */
+
+/* Hero Section */
+.hero-text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #2C3E50;
+  max-width: 800px;
+}
+
+/* Section Spacing */
+section {
+  padding: 2rem 0;
+}
+
+/* Button Example Containers */
+.button-example {
+  background-color: #FFFFFF;
+  border: 1px solid #ECF0F1;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.button-example h3 {
+  color: #2C3E50;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #F8F9FA;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.explanation {
+  color: #2C3E50;
+  line-height: 1.8;
+  font-size: 0.9375rem;
+}
+
+.explanation strong {
+  color: #2C3E50;
+  font-weight: 700;
+}
+
+/* Figma Mockups Container */
+.figma-mockups {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.figma-mockups figure {
+  margin: 0;
+}
+
+.figma-mockups img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ECF0F1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.figma-mockups figcaption {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #2C3E50;
+  line-height: 1.6;
+}
+
+.figma-mockups figcaption strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2C3E50;
+  font-weight: 700;
+}
+
+/* Form Showcase */
+.form-showcase {
+  margin-top: 2rem;
+}
+
+.form-showcase h3 {
+  color: #2C3E50;
+  margin-bottom: 1rem;
+}
+
+/* Form Annotations */
+.form-annotations {
+  background-color: #F8F9FA;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 3rem;
+}
+
+.form-annotations h4 {
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.annotation-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #ECF0F1;
+}
+
+.annotation-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.annotation-item strong {
+  display: block;
+  color: #2C3E50;
+  font-size: 1.0625rem;
+  margin-bottom: 0.5rem;
+}
+
+.annotation-item p {
+  color: #2C3E50;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.annotation-item code {
+  background-color: #ECF0F1;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: #E74C3C;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .figma-mockups {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .button-container {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .button-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .button-container .btn {
+    width: 100%;
+  }
+}

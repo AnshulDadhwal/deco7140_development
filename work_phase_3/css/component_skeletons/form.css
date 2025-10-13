@@ -1,0 +1,182 @@
+/* Form component skeleton Styles */
+
+/* Form Container */
+.community-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #FFFFFF;
+  border: 1px solid #ECF0F1;
+  border-radius: 8px;
+}
+
+/* Form Group - wrapper for each field */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Labels */
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2C3E50;
+  font-size: 1rem;
+}
+
+/* Required field indicator */
+.required {
+  color: #E74C3C;
+  font-weight: 700;
+}
+
+/* Input Fields */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  border: 2px solid #BDC3C7;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Placeholder text styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #95A5A6;
+  font-style: italic;
+}
+
+/* Focus state - clear visual feedback */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498DB;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Invalid state - shown when browser validation fails */
+.form-group input:invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+  border-color: #E74C3C;
+}
+
+/* Valid state */
+.form-group input:valid:not(:placeholder-shown),
+.form-group textarea:valid:not(:placeholder-shown) {
+  border-color: #27AE60;
+}
+
+/* Textarea specific */
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* File input styling */
+.form-group input[type="file"] {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* Helper text */
+.form-help {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #7F8C8D;
+  line-height: 1.4;
+}
+
+/* Form Actions - button container */
+.form-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+/* Form Feedback Messages */
+.form-feedback {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  display: none; /* Hidden by default */
+}
+
+/* Show feedback when it has content or specific class */
+.form-feedback:not(:empty),
+.form-feedback.feedback-success,
+.form-feedback.feedback-error,
+.form-feedback.feedback-loading {
+  display: block;
+}
+
+/* Success feedback */
+.feedback-success {
+  background-color: #D5F4E6;
+  color: #27AE60;
+  border: 2px solid #27AE60;
+}
+
+/* Error feedback */
+.feedback-error {
+  background-color: #FADBD8;
+  color: #E74C3C;
+  border: 2px solid #E74C3C;
+}
+
+/* Loading feedback */
+.feedback-loading {
+  background-color: #EBF5FB;
+  color: #3498DB;
+  border: 2px solid #3498DB;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .community-form {
+    padding: 1.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}
+
+/* Accessibility Improvements */
+
+/* Ensure focus is always visible */
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+  outline: 3px solid #3498DB;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .form-group input,
+  .form-group textarea {
+    border-width: 3px;
+  }
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .form-group input,
+  .form-group textarea,
+  .form-feedback {
+    transition: none;
+  }
+}
