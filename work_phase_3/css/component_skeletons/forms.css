@@ -154,29 +154,3 @@
     width: 100%;
   }
 }
-
-/* Accessibility Improvements */
-
-/* Ensure focus is always visible */
-.form-group input:focus-visible,
-.form-group textarea:focus-visible {
-  outline: 3px solid #3498DB;
-  outline-offset: 2px;
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .form-group input,
-  .form-group textarea {
-    border-width: 3px;
-  }
-}
-
-/* Reduced motion for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
-  .form-group input,
-  .form-group textarea,
-  .form-feedback {
-    transition: none;
-  }
-}
