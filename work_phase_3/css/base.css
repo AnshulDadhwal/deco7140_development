@@ -137,6 +137,18 @@ section {
   margin-bottom: var(--space-section-bottom);
 }
 
+strong {
+  font-weight: bold;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
 /* Spacing Helper Classes */
 
 /* Margin Helpers */

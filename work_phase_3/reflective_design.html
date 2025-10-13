@@ -4,53 +4,456 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon and Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
     <link rel="manifest" href="assets/site.webmanifest" />
-    
+
     <title>Work Phase 3 - Reflective Design</title>
 
-    <!-- CSS links -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/page_css/reflective_design.css" />
   </head>
   <body>
-    <!-- START: PAGE STRUCTURE -->
-
-    <!-- Mobile Navigation -->
     <nav id="nav-mobile" aria-label="Main Navigation">
       <ul>
-        <li><a href="index.html"><span class="icon">🏠</span></a></li>
-        <li><a href="site_map.html"><span class="icon">🧭</span></a></li>
-        <li><a href="style_guide.html"><span class="icon">🎨</span></a></li>
-        <li><a href="ethical_response.html"><span class="icon">⚖️</span></a></li>
-        <li><a href="genai_mt_acknowledgement.html"><span class="icon">🤖</span></a></li>
+        <li>
+          <a href="index.html"><span class="icon">🏠</span></a>
+        </li>
+        <li>
+          <a href="site_map.html"><span class="icon">🧭</span></a>
+        </li>
+        <li>
+          <a href="style_guide.html" aria-current="page"
+            ><span class="icon">🎨</span></a
+          >
+        </li>
+        <li>
+          <a href="ethical_response.html"><span class="icon">⚖️</span></a>
+        </li>
+        <li>
+          <a href="genai_mt_acknowledgement.html"
+            ><span class="icon">🤖</span></a
+          >
+        </li>
       </ul>
     </nav>
 
-    <!-- Desktop Navigation -->
     <nav id="nav-desktop" aria-label="Main Navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="site_map.html">Site Map</a></li>
         <li><a href="style_guide.html" aria-current="page">Style Guide</a></li>
         <li><a href="ethical_response.html">Ethical Response</a></li>
-        <li><a href="genai_mt_acknowledgement.html">GenAI MT Acknowledgement</a></li>
+        <li>
+          <a href="genai_mt_acknowledgement.html">GenAI MT Acknowledgement</a>
+        </li>
       </ul>
     </nav>
 
     <main>
       <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <a href="index.html">Home</a> /
+          <a href="style_guide.html">Style Guide</a> /
+          <span aria-current="page">Reflective Design</span>
+        </nav>
+
         <header>
-          <h1>Reflective Design</h1>
-          <p class="m-y-4">Something.</p>
+          <h1 class="m-y-5">Reflective Design</h1>
+          <p class="hero-text">
+            The focus of this section is supporting user meaning and identity,
+            aligning design choices with the client's vision and core community
+            values.
+          </p>
         </header>
+
+        <section id="reflective-values">
+          <h2>Values Mapping</h2>
+          <table class="values-table">
+            <thead>
+              <tr>
+                <th>Value</th>
+                <th>Design Implication</th>
+                <th>Specific Element</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 1. Belonging & Community Connection -->
+              <tr>
+                <td>Belonging & Community Connection</td>
+                <td>
+                  Make it obvious that it’s a safe, welcoming hub where people
+                  can meet, talk, and share. Use friendly language and visuals
+                  that show real students, not stock stereotypes.
+                </td>
+                <td>
+                  Home page with an immediate “Join Now” call-to-action; Member
+                  Highlights and Share Your Story on Connect; Discussion board.
+                </td>
+              </tr>
+
+              <!-- 2. Accessibility & Low-Bandwidth Inclusivity -->
+              <tr>
+                <td>Accessibility & Low-Bandwidth Inclusivity</td>
+                <td>
+                  Prefer text-first pages, clear headings, and descriptive
+                  links. Keep keyboard focus visible and form labels explicit.
+                  Design for older phones and slower connections so no one is
+                  locked out.
+                </td>
+                <td>
+                  Resources pages that use simple, structured content;
+                  WCAG-aware link states with visible focus; Responsive layouts
+                  that don’t rely on heavy images.
+                </td>
+              </tr>
+
+              <!-- 3. Trust & Safety -->
+              <tr>
+                <td>Trust & Safety</td>
+                <td>
+                  Signal what’s verified, keep moderation visible, and avoid
+                  vague or click-baity actions.
+                </td>
+                <td>
+                  Opportunity cards with a “visa-friendly” badge and concise job
+                  summaries; Community guidelines; Descriptive link text
+                  everywhere.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Short Critique -->
+          <h3 class="m-t-5">Quick Self-Critique</h3>
+          <p>
+            The trust and safety mapping is on the right track, but it can go
+            deeper. The “visa-friendly” badge on job cards is clear, yet it
+            still relies on the person posting telling the truth. We can tighten
+            this by only allowing the badge when the employer is verified or
+            when a staff member reviews the listing. More steps like this can
+            turn a good signal into a reliable safeguard.
+          </p>
+        </section>
+        <section id="Meaning through Imagery and Tone">
+          <h2>Meaning through Imagery and Tone</h2>
+
+          <h3>Analysing an existing site</h3>
+          <p>
+            I looked at the UQ Alumni Network website because it serves a
+            similar audience to Global Community Connect. The first impression
+            it gives is warm and professional. The images show real people at
+            events, smiling and interacting, which helps create a sense of
+            connection and achievement. The site values belonging, pride, and
+            community. Its tone is friendly but still formal enough to feel
+            credible. The visuals and words work together quite well, though
+            some of the imagery feels very academic and less focused on cultural
+            diversity. It includes alumni and professionals easily but might
+            overlook students who are new or still settling in. It meets most
+            client needs but could do more to highlight personal stories and
+            cross cultural connection.
+          </p>
+
+          <h3>Identity and emotional tone</h3>
+          <p>
+            Global Community Connect should project belonging, inclusivity,
+            optimism, and empowerment. The emotional tone should feel warm and
+            hopeful. Visitors should feel welcome, comfortable to share their
+            stories, and confident that they are part of something bigger.
+          </p>
+
+          <h3>Homepage imagery</h3>
+
+          <div class="image-section">
+            <figure>
+              <img
+                src="assets/images/friendship.png"
+                alt="People sharing a laugh at a park"
+              />
+              <figcaption>
+                This image shows real people enjoying each other’s company. It
+                gives a warm first impression and shows that the site is about
+                belonging, friendship, and shared experiences.
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="assets/images/network-handshake.png"
+                alt="Two people shaking hands or exchanging name cards"
+              />
+              <figcaption>
+                This represents connection and opportunity. It shows how the
+                site helps people meet, network, and grow through community
+                support.
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="assets/images/brisbane-skyline.png"
+                alt="City and campus skyline at sunset"
+              />
+              <figcaption>
+                This adds a feeling of optimism and possibility. It reminds
+                users that the site links real places and real journeys that
+                start here and continue across the world.
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="assets/images/global-graduate.png"
+                alt="Smiling graduate with international flags in the background"
+              />
+              <figcaption>
+                This reflects diversity and pride. It shows that everyone, no
+                matter their background, is part of one connected community.
+              </figcaption>
+            </figure>
+          </div>
+
+          <h3>Homepage text</h3>
+          <p><strong>Welcome to Global Community Connect</strong></p>
+          <p>
+            Join a vibrant community of students, alumni, and mentors from
+            around the world. Share your story, explore events, and build
+            meaningful connections that last. Together we grow stronger through
+            culture, learning, and friendship.
+          </p>
+          <p>
+            This short message supports the identity of the site by making users
+            feel part of a shared global journey. It uses friendly and positive
+            language that builds trust and motivation.
+          </p>
+
+          <h3>Annotation</h3>
+          <p>
+            The imagery and language work together to express connection,
+            optimism, and inclusion. The photos create warmth and diversity,
+            while the words invite people to join and participate. Together they
+            support the client’s goal of building a global network and give long
+            term meaning by helping users see themselves as part of a lasting
+            community.
+          </p>
+        </section>
+
+        <section id="Language and Expression">
+          <h2>Language and Expression</h2>
+
+          <h3>Reviewing other sites</h3>
+          <p>
+            I looked at the UQ Alumni Network website again. Its tone feels
+            friendly and professional, but it can sound formal and less personal
+            for new international users. The language works well for alumni but
+            does not always show the openness or diversity that a global
+            audience would expect.
+          </p>
+
+          <h3>Inclusive language checklist</h3>
+          <p>
+            I will use people-first and gender-neutral language, avoid
+            stereotypes, write in clear English, and refer to groups
+            respectfully. These choices make the site easy to read and help
+            everyone feel valued and included.
+          </p>
+
+          <h3>Original homepage text</h3>
+          <div class="text-comparison">
+            <p>
+              <strong>Original</strong>
+              Welcome to Global Community Connect. Join a vibrant community of
+              students, alumni, and mentors from around the world. Share your
+              story, explore events, and build meaningful connections that last.
+              Together we grow stronger through culture, learning, and
+              friendship.
+            </p>
+          </div>
+
+          <h3>Revised homepage text</h3>
+          <div class="text-comparison">
+            <p>
+              <strong>Revised</strong>
+              Welcome to Global Community Connect. Be part of a welcoming
+              network of people from every background. Share your journey,
+              discover stories, and connect through shared experiences. Learn,
+              grow, and support each other as one community that celebrates
+              diversity and belonging.
+            </p>
+          </div>
+
+          <h3>Annotation</h3>
+          <p>
+            The revised text uses simple, inclusive language that feels warm and
+            open. It avoids formal phrasing and supports accessibility by being
+            clear and easy to read. This better matches the site’s mission to
+            create a global space where everyone feels welcome and respected.
+          </p>
+        </section>
+
+        <section id="Dynamic API Content">
+          <h2>Dynamic API Content</h2>
+
+          <h3>Purpose and Reflective Design Connection</h3>
+          <p>
+            This section demonstrates how dynamic content supports reflective
+            design by allowing users to see themselves and their peers
+            represented on the platform. By displaying real community members
+            and their stories, we create a sense of belonging and identity that
+            goes beyond static content.
+          </p>
+
+          <!-- Container for dynamically loaded community members -->
+          <section
+            id="community-list"
+            aria-live="polite"
+            aria-label="Community Members"
+          >
+            <!-- Content will be dynamically inserted here by JavaScript -->
+          </section>
+
+          <h3>Annotation</h3>
+          <p>
+            The dynamic community content directly supports the reflective level
+            of design by helping users recognize themselves as part of a larger,
+            diverse community. The personal photos and messages create emotional
+            connection and demonstrate that this is a real, active community
+            rather than just a static website. This authenticity builds trust
+            and encourages new users to contribute their own stories, creating a
+            positive feedback loop that strengthens the community identity.
+          </p>
+        </section>
+
+        <section id="accessibility-audit">
+          <h2>Accessibility Audit</h2>
+          <p>
+            This audit used the IBM Equal Access checker on
+            <strong>behavioural_design.html</strong>. Below are three issues I
+            will address in the final build.
+          </p>
+
+          <article>
+            <h3>1) Text contrast is too low</h3>
+            <p><strong>WCAG:</strong> 1.4.3 Contrast (Minimum) AA</p>
+            <p>
+              <strong>Where:</strong> Header links such as
+              <code>&lt;a href="index.html"&gt;</code> and
+              <code>&lt;a href="style_guide.html"&gt;</code>, and the primary
+              button.
+            </p>
+            <p>
+              <strong>Why it matters:</strong> Low contrast makes links and
+              buttons hard to read for many users, especially on small screens
+              or in bright light.
+            </p>
+            <p>
+              <strong>Fix:</strong> Increase the color contrast of link and
+              button text against their backgrounds so it meets AA. I will
+              adjust according to the colour wheel to ensure sufficient
+              contrast.
+            </p>
+          </article>
+
+          <article>
+            <h3>2) Focus indicator is not clearly visible</h3>
+            <p><strong>WCAG:</strong> 2.4.7 Focus Visible AA</p>
+            <p>
+              <strong>Where:</strong> Navigation links like
+              <code>&lt;a href="index.html"&gt;</code>,
+              <code>&lt;a href="site_map.html"&gt;</code>, and the current page
+              link.
+            </p>
+            <p>
+              <strong>Why it matters:</strong> Keyboard users must see where
+              focus is to move through the site with confidence.
+            </p>
+            <p>
+              <strong>Fix:</strong> Add a clear focus style on interactive
+              elements. I will use a clear outline on focus for links and
+              buttons. I will also test with only the keyboard.
+            </p>
+          </article>
+
+          <article>
+            <h3>3) Form fields need grouping and clear relationships</h3>
+            <p><strong>WCAG:</strong> 1.3.1 Info and Relationships A</p>
+            <p>
+              <strong>Where:</strong> Related inputs like text fields,
+              textareas, and the file upload.
+            </p>
+            <p>
+              <strong>Why it matters:</strong> Screen reader users rely on
+              structure to understand which fields belong together and what they
+              do.
+            </p>
+            <p>
+              <strong>Fix:</strong> Wrap related inputs in a
+              <code>&lt;fieldset&gt;</code>.
+            </p>
+          </article>
+        </section>
+
+        <section id="client-response">
+          <h2>Response to Client: Newsletter Subscription Plugin</h2>
+
+          <p>
+            Thank you for suggesting the addition of a newsletter subscription
+            feature. I understand that your goal is to keep community members
+            updated and strengthen ongoing engagement through regular updates
+            and event news.
+          </p>
+
+          <h3>Ethical reasoning</h3>
+          <p>
+            While this goal aligns well with your mission, the use of a
+            third-party subscription plugin can raise privacy and consent
+            concerns. Users may not clearly understand how their data is stored,
+            shared, or used for marketing purposes. According to the ACS Code
+            principles, Primacy of the Public Interest and Honesty, we must
+            ensure that user information is collected transparently and handled
+            responsibly.
+          </p>
+
+          <h3>Recommendation</h3>
+          <p>
+            I recommend integrating a simple, self-hosted subscription form that
+            clearly explains what data is collected and how it will be used.
+            Include a short privacy notice next to the “Subscribe” button and
+            require explicit consent before submission. If a third-party service
+            such as Mailchimp or Intuit is required, we should ensure it complies 
+            with Australian Privacy laws and that users can unsubscribe easily at
+            any time.
+          </p>
+
+          <h3>Client perspective</h3>
+          <p>
+            This approach still aligns with your engagement goals while improving
+            user trust and protecting your organisation’s reputation.
+            Transparent data practices build confidence, which can increase
+            subscription rates and lead to stronger, long-term relationships with
+            your audience.
+          </p>
+        </section>
       </div>
     </main>
-    <!-- END: PAGE STRUCTURE -->
+    <script type="module" src="js/reflective_design.js"></script>
   </body>
 </html>

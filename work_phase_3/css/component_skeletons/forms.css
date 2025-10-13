@@ -13,6 +13,9 @@
 /* Form Group - wrapper for each field */
 .form-group {
   margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Labels */
@@ -22,6 +25,9 @@
   font-weight: 600;
   color: #2C3E50;
   font-size: 1rem;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
 }
 
 /* Form Showcase */
@@ -46,6 +52,7 @@
 .form-group input[type="file"],
 .form-group textarea {
   width: 100%;
+  max-width: 500px;
   padding: 0.75rem;
   font-size: 1rem;
   font-family: Arial, sans-serif;
@@ -53,6 +60,8 @@
   border-radius: 8px;
   background-color: #FFFFFF;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* Placeholder text styling */
@@ -101,6 +110,9 @@
   font-size: 0.875rem;
   color: #7F8C8D;
   line-height: 1.4;
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
 }
 
 /* Form Actions - button container */
@@ -108,7 +120,7 @@
   margin-top: 2rem;
   display: flex;
   gap: 1rem;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 /* Form Feedback Messages */
@@ -153,15 +165,34 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .community-form {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .form-group {
+    padding: 0 0.5rem;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="file"],
+  .form-group textarea {
+    max-width: 100%;
+  }
+
+  .form-group label,
+  .form-help {
+    max-width: 100%;
   }
 
   .form-actions {
     flex-direction: column;
+    align-items: center;
+    padding: 0 0.5rem;
   }
 
   .form-actions .btn {
     width: 100%;
+    max-width: 100%;
   }
 }
 
