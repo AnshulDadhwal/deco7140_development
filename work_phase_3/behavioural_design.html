@@ -9,24 +9,25 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
     <link rel="manifest" href="assets/site.webmanifest" />
-    
-    <title>Work Phase 3 - Behavioural Design</title>
+
+    <title>Behavioural Design - Style Guide</title>
 
     <!-- CSS links -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/component_skeletons/buttons.css" />
+    <link rel="stylesheet" href="css/component_skeletons/forms.css" />
+    <link rel="stylesheet" href="css/page_css/behavioural_design.css" />
   </head>
   <body>
-    <!-- START: PAGE STRUCTURE -->
-
     <!-- Mobile Navigation -->
     <nav id="nav-mobile" aria-label="Main Navigation">
       <ul>
         <li><a href="index.html"><span class="icon">🏠</span></a></li>
         <li><a href="site_map.html"><span class="icon">🧭</span></a></li>
-        <li><a href="style_guide.html"><span class="icon">🎨</span></a></li>
+        <li><a href="style_guide.html" aria-current="page"><span class="icon">🎨</span></a></li>
         <li><a href="ethical_response.html"><span class="icon">⚖️</span></a></li>
         <li><a href="genai_mt_acknowledgement.html"><span class="icon">🤖</span></a></li>
       </ul>
@@ -45,12 +46,286 @@
 
     <main>
       <div class="container">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <a href="index.html">Home</a> / 
+          <a href="style_guide.html">Style Guide</a> / 
+          <span aria-current="page">Behavioural Design</span>
+        </nav>
+
         <header>
-          <h1>Behavioural Design</h1>
-          <p class="m-y-4">Something.</p>
+          <h1 class="m-y-5">Behavioural Design</h1>
+          <p class="hero-text">Explore the interactive components and functional elements that define how users interact with our site. This guide showcases buttons, forms, navigation patterns, and other UI elements designed for usability, accessibility, and clear feedback.</p>
         </header>
+
+        <!-- Button Styles Section -->
+        <section class="m-y-5">
+          <h2>Button Styles</h2>
+          <p class="m-y-3">Our button design provides clear affordances and visual feedback across all interaction states. Each button type serves a specific purpose in guiding user actions.</p>
+          
+          <!-- Primary Button Example -->
+          <div class="button-example m-y-4">
+            <h3>Primary Button</h3>
+            <div class="button-container">
+              <button class="btn btn-primary">Join Now</button>
+              <button class="btn btn-primary">Submit</button>
+              <button class="btn btn-primary">RSVP to Event</button>
+            </div>
+            <p class="explanation m-t-3">
+              <strong>Purpose:</strong> Primary buttons are used for the main call-to-action on each page or section. They use our brand color (#3498DB) with high contrast white text to draw user attention.<br><br>
+              <strong>Affordance:</strong> The rounded corners, padding, and bold color signal that this element is clickable. The button shape follows familiar web conventions that users expect.<br><br>
+              <strong>Feedback:</strong> Hover state darkens the background and adds subtle shadow. Active (pressed) state scales down slightly to simulate physical button press. This multi-sensory feedback confirms user interaction.<br><br>
+              <strong>Accessibility:</strong> Meets WCAG AA contrast ratio (4.5:1). Focus state includes visible outline for keyboard navigation. Works for Maya who needs clear interface elements and Ahmed who may use keyboard navigation.
+            </p>
+          </div>
+
+          <!-- Secondary Button Example -->
+          <div class="button-example m-y-4">
+            <h3>Secondary Button</h3>
+            <div class="button-container">
+              <button class="btn btn-secondary">Learn More</button>
+              <button class="btn btn-secondary">Cancel</button>
+              <button class="btn btn-secondary">View Details</button>
+            </div>
+            <p class="explanation m-t-3">
+              <strong>Purpose:</strong> Secondary buttons are used for less prominent actions or alternatives to the primary action. They use an outlined style to create visual hierarchy without competing with primary buttons.<br><br>
+              <strong>Affordance:</strong> Border and text color match the primary blue, maintaining brand consistency while appearing less dominant than filled buttons.<br><br>
+              <strong>Feedback:</strong> Hover state fills the background while maintaining the outline, creating clear visual feedback. This helps international students like Sofia understand the interface is responding to their actions.<br><br>
+              <strong>Accessibility:</strong> Border width is 2px minimum for visibility. Focus state includes outline offset for clear keyboard navigation feedback.
+            </p>
+          </div>
+
+          <!-- Disabled Button Example -->
+          <div class="button-example m-y-4">
+            <h3>Disabled Button State</h3>
+            <div class="button-container">
+              <button class="btn btn-primary" disabled>Submit</button>
+              <button class="btn btn-secondary" disabled>Learn More</button>
+            </div>
+            <p class="explanation m-t-3">
+              <strong>Purpose:</strong> Disabled buttons show users when an action is unavailable (e.g., form not complete, already registered for event).<br><br>
+              <strong>Visual Design:</strong> Reduced opacity (50%) and no hover effects communicate that the button cannot be clicked. Cursor changes to "not-allowed" to reinforce this.<br><br>
+              <strong>Accessibility:</strong> Uses the disabled attribute so screen readers announce "Submit, button, dimmed" or similar. This helps all users understand the button's current state.
+            </p>
+          </div>
+
+          <!-- Icon Button Example -->
+          <div class="button-example m-y-4">
+            <h3>Icon-Only Buttons</h3>
+            <div class="button-container">
+              <button class="btn btn-icon" aria-label="Search">🔍</button>
+              <button class="btn btn-icon" aria-label="Close menu">✕</button>
+              <button class="btn btn-icon" aria-label="Favorite this event">❤️</button>
+            </div>
+            <p class="explanation m-t-3">
+              <strong>Purpose:</strong> Icon buttons save space in compact layouts like mobile navigation or card actions.<br><br>
+              <strong>Accessibility:</strong> Every icon button includes aria-label attribute to describe its purpose for screen reader users. This is critical because icons alone may not be universally understood, especially for international students with varying cultural contexts.<br><br>
+              <strong>Visual Design:</strong> Minimal square/circular buttons with icon centered. Hover state adds background color to show interactivity without overwhelming the design.
+            </p>
+          </div>
+
+          <!-- Button States Summary -->
+          <div class="button-example m-y-4">
+            <h3>Interactive States Summary</h3>
+            <p class="m-y-3">Try interacting with the buttons above to see these states in action:</p>
+            <ul class="state-list">
+              <li><strong>Default:</strong> How the button appears at rest</li>
+              <li><strong>Hover:</strong> Mouse cursor over button - darker background, subtle shadow</li>
+              <li><strong>Focus:</strong> Tab to button with keyboard - visible outline ring (try pressing Tab)</li>
+              <li><strong>Active/Pressed:</strong> Click and hold - slight scale reduction for physical feedback</li>
+              <li><strong>Disabled:</strong> Cannot be clicked - reduced opacity, no hover effects</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Link Styles Section -->
+        <section class="m-y-5">
+          <h2>Link Styles</h2>
+          <p class="m-y-3">Link states are designed to support accessibility and provide clear visual feedback for all users. Each state provides clear signifiers to help users understand their interactions.</p>
+          
+          <!-- Figma mockup screenshots -->
+          <div class="figma-mockups">
+            <figure>
+              <img src="assets/behavioural/link-states.png" alt="Four link states showing default underlined blue link, hover state with darker background, visited state in purple, and focus state with visible outline ring for keyboard navigation" class="img-fluid" />
+              <figcaption>
+                <strong>Link States Design:</strong> Our links use multiple visual cues beyond color to ensure accessibility. The default state uses underlining and color (#3498DB) to distinguish links from body text. Hover state adds background highlighting for clear feedback. Visited links use a distinct purple shade to help users track their navigation. Focus states feature a prominent outline meeting WCAG 2.4.7 for keyboard users, supporting Ahmed and other users who may rely on keyboard navigation.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- Navigation Components Section -->
+        <section class="m-y-5">
+          <h2>Navigation Components</h2>
+          <p class="m-y-3">Our navigation design ensures users can easily find content and understand where they are within the site hierarchy. The design supports both mobile and desktop experiences with clear visual feedback.</p>
+          
+          <!-- Figma mockup screenshots -->
+          <div class="figma-mockups">
+            <figure>
+              <img src="assets/behavioural/navigation-mobile.png" alt="Mobile navigation bar with five emoji icons representing Home, Site Map, Style Guide, Ethical Response, and GenAI Acknowledgement, showing active state with highlighted background" class="img-fluid" />
+              <figcaption>
+                <strong>Mobile Navigation:</strong> Icon-based navigation with emoji provides universal recognition across language barriers, crucial for international students like Sofia who may have varying English proficiency. Active page is indicated with background color and aria-current attribute for screen readers. Touch targets meet the 44x44px minimum for accessibility.
+              </figcaption>
+            </figure>
+            
+            <figure>
+              <img src="assets/behavioural/navigation-desktop.png" alt="Desktop horizontal navigation with text labels Home, Site Map, Style Guide, Ethical Response, and GenAI MT Acknowledgement, showing hover and active states with underlines and color changes" class="img-fluid" />
+              <figcaption>
+                <strong>Desktop Navigation:</strong> Text-based navigation provides clear labels for desktop users. Hover states use underline and color change for feedback. Active page maintains consistent styling with the mobile version. The navigation structure mirrors the site map hierarchy, making it predictable and easy to understand for new users.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- Card Components Section -->
+        <section class="m-y-5">
+          <h2>Card Components</h2>
+          <p class="m-y-3">Cards are used throughout the site to display events, member highlights, and opportunities in a consistent, scannable format. Each card type is optimized for its specific content while maintaining visual consistency.</p>
+          
+          <!-- Figma mockup screenshots -->
+          <div class="figma-mockups">
+            <figure>
+              <img src="assets/behavioural/card-event.png" alt="Event card showing colorful header image, event type badge in blue, event title in bold, date and time with clock icon, location with pin icon, and RSVP button at bottom" class="img-fluid" />
+              <figcaption>
+                <strong>Event Card Design:</strong> Features clear visual hierarchy with image at top, color-coded badge for event type (Social, Professional, Cultural, Academic), and prominent RSVP button. Icons accompany date and location for universal understanding. This supports Maya's need to find social events and Ahmed's goal to promote cultural celebrations. The card uses consistent spacing and our primary blue (#3498DB) for interactive elements.
+              </figcaption>
+            </figure>
+            
+            <figure>
+              <img src="assets/behavioural/card-member.png" alt="Member highlight card with circular profile photo, member name and university below, brief story excerpt, and Read More link at bottom" class="img-fluid" />
+              <figcaption>
+                <strong>Member Highlight Card:</strong> Designed to humanize the community with profile photo, name, university affiliation, and story preview. The "Read More" link encourages engagement. This card type helps Chen share his journey and allows Luca to find people from his home country. Accessible alt text describes each member photo for screen reader users.
+              </figcaption>
+            </figure>
+            
+            <figure>
+              <img src="assets/behavioural/card-opportunity.png" alt="Opportunity card showing job title, company logo, visa-friendly badge in green, brief description, location and type tags, and Apply button" class="img-fluid" />
+              <figcaption>
+                <strong>Opportunity Card Design:</strong> Highlights visa compatibility with prominent badge (addressing Maya's and Sofia's needs), includes company branding, and clear call-to-action. Tags for location and employment type help users scan quickly. The hover state adds subtle shadow to indicate interactivity while maintaining professionalism appropriate for career opportunities.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- Form Design Section -->
+        <section class="m-y-5">
+          <h2>Form Design</h2>
+          <p class="m-y-3">Our form design prioritizes clarity, accessibility, and helpful feedback to guide users through data submission. This community form demonstrates our approach to collecting user information while supporting diverse users including international students with varying English proficiency.</p>
+          
+          <!-- Form Implementation -->
+          <div class="form-showcase">
+            <h3>Join the Community Form</h3>
+            <p class="m-y-3">This form submits data to the CCI Community API, demonstrating validation, accessibility, and user feedback principles.</p>
+            
+            <form id="community-form" enctype="multipart/form-data" class="community-form">
+              
+              <!-- Name Field -->
+              <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required 
+                  placeholder="Enter your full name"
+                  aria-required="true"
+                />
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required 
+                  placeholder="your.email@example.com"
+                  aria-required="true"
+                />
+              </div>
+
+              <!-- Message Field -->
+              <div class="form-group">
+                <label for="message">Message <span class="required">*</span></label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="5" 
+                  required
+                  placeholder="Tell us about yourself and why you'd like to join..."
+                  aria-required="true"
+                ></textarea>
+              </div>
+
+              <!-- Photo Upload Field -->
+              <div class="form-group">
+                <label for="photo">Profile Photo (Optional)</label>
+                <input 
+                  type="file" 
+                  id="photo" 
+                  name="photo" 
+                  accept="image/*"
+                  aria-describedby="photo-help"
+                />
+                <small id="photo-help" class="form-help">Upload a profile photo (JPG, PNG, or GIF)</small>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Join the Community</button>
+              </div>
+
+            </form>
+
+            <!-- Feedback message area -->
+            <p id="form-feedback" aria-live="polite" class="form-feedback"></p>
+
+            <!-- Form Design Annotations -->
+            <div class="form-annotations m-t-4">
+              <h4>Form Design Principles</h4>
+              
+              <div class="annotation-item">
+                <strong>Clear Labels & Required Fields:</strong>
+                <p>Every input has an associated label using the <code>for</code> attribute. Required fields are marked with an asterisk (*) and use the <code>required</code> attribute for built-in browser validation. This helps international students like Ahmed understand exactly what information is needed.</p>
+              </div>
+
+              <div class="annotation-item">
+                <strong>Placeholder Text as Guidance:</strong>
+                <p>Placeholders provide examples of expected input format (e.g., "your.email@example.com") without replacing labels. This supports users with varying English proficiency like Sofia who may need extra context.</p>
+              </div>
+
+              <div class="annotation-item">
+                <strong>Appropriate Input Types:</strong>
+                <p>Using <code>type="email"</code> triggers email-specific validation and mobile keyboards with @ symbol. <code>type="file"</code> with <code>accept="image/*"</code> filters file selection to images only. This reduces user errors and improves mobile experience.</p>
+              </div>
+
+              <div class="annotation-item">
+                <strong>Accessible File Upload:</strong>
+                <p>The photo upload includes <code>aria-describedby</code> pointing to help text that explains accepted file types. The field is optional, reducing barriers for users who may not have a photo ready.</p>
+              </div>
+
+              <div class="annotation-item">
+                <strong>Visual Feedback:</strong>
+                <p>The form provides immediate feedback through the <code>form-feedback</code> element with <code>aria-live="polite"</code>. Success messages appear in green, errors in red. This multi-modal feedback (color + text) ensures all users understand the result.</p>
+              </div>
+
+              <div class="annotation-item">
+                <strong>Focus States:</strong>
+                <p>Input fields show clear focus indication with a blue border when selected. This is essential for keyboard users and helps all users track their position in the form.</p>
+              </div>
+
+              <div class="annotation-item">
+                <strong>API Integration:</strong>
+                <p>Form data is submitted to the CCI Community API using the POST method. The JavaScript module handles the submission asynchronously, preventing page reload and providing immediate feedback. Error handling ensures users know if submission fails and why.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </div>
     </main>
-    <!-- END: PAGE STRUCTURE -->
+
+    <script src="js/behavioural_design.js" type="module"></script>
   </body>
 </html>
