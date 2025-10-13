@@ -41,12 +41,12 @@ function initializeFormSubmission() {
     feedback.textContent = 'Submitting...';
 
     // API endpoint from documentation
-    const apiEndpoint = 'https://deco7140-work.uqcloud.net/api/community/';
+    const apiEndpoint = 'https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/';
 
     // Required headers - REPLACE THESE WITH YOUR ACTUAL VALUES
     const { success, data } = await postFormData(form, apiEndpoint, {
       'student_number': 's4738601',
-      'uqcloud_zone_id': 'https://deco7140-b9e6a7cc.uqcloud.net',
+      'uqcloud_zone_id': 'b9e6a7cc',
     });
 
     if (success) {

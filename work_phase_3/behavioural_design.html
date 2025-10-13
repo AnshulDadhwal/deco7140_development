@@ -266,46 +266,6 @@
 
             <!-- Feedback message area -->
             <p id="form-feedback" aria-live="polite" class="form-feedback"></p>
-
-            <!-- Form Design Annotations -->
-            <div class="form-annotations m-t-4">
-              <h4>Form Design Principles</h4>
-              
-              <div class="annotation-item">
-                <strong>Clear Labels & Required Fields:</strong>
-                <p>Every input has an associated label using the <code>for</code> attribute. Required fields are marked with an asterisk (*) and use the <code>required</code> attribute for built-in browser validation. This helps international students like Ahmed understand exactly what information is needed.</p>
-              </div>
-
-              <div class="annotation-item">
-                <strong>Placeholder Text as Guidance:</strong>
-                <p>Placeholders provide examples of expected input format (e.g., "your.email@example.com") without replacing labels. This supports users with varying English proficiency like Sofia who may need extra context.</p>
-              </div>
-
-              <div class="annotation-item">
-                <strong>Appropriate Input Types:</strong>
-                <p>Using <code>type="email"</code> triggers email-specific validation and mobile keyboards with @ symbol. <code>type="file"</code> with <code>accept="image/*"</code> filters file selection to images only. This reduces user errors and improves mobile experience.</p>
-              </div>
-
-              <div class="annotation-item">
-                <strong>Accessible File Upload:</strong>
-                <p>The photo upload includes <code>aria-describedby</code> pointing to help text that explains accepted file types. The field is optional, reducing barriers for users who may not have a photo ready.</p>
-              </div>
-
-              <div class="annotation-item">
-                <strong>Visual Feedback:</strong>
-                <p>The form provides immediate feedback through the <code>form-feedback</code> element with <code>aria-live="polite"</code>. Success messages appear in green, errors in red. This multi-modal feedback (color + text) ensures all users understand the result.</p>
-              </div>
-
-              <div class="annotation-item">
-                <strong>Focus States:</strong>
-                <p>Input fields show clear focus indication with a blue border when selected. This is essential for keyboard users and helps all users track their position in the form.</p>
-              </div>
-
-              <div class="annotation-item">
-                <strong>API Integration:</strong>
-                <p>Form data is submitted to the CCI Community API using the POST method. The JavaScript module handles the submission asynchronously, preventing page reload and providing immediate feedback. Error handling ensures users know if submission fails and why.</p>
-              </div>
-            </div>
           </div>
         </section>
 
