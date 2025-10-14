@@ -112,3 +112,32 @@ nav ul {
   line-height: 1.6;
   color: #555;
 }
+
+
+/* GenAI Acknowledgement Styling*/
+.genai-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.genai-table th,
+.genai-table td {
+  border: 1px solid var(--color-secondary);
+  padding: 6px 10px;
+  text-align: left;
+}
+.genai-table th {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+}
+
+.genai-table a {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+.genai-table a:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
