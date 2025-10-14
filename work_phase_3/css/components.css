@@ -85,6 +85,11 @@ nav ul {
   height: auto;
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Breadcrumb component */
 .breadcrumb {
   font-size: 0.875rem;
