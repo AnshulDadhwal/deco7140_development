@@ -1,0 +1,50 @@
+/* ACCORDION SKELETON - Base styles for reusable accordion component */
+
+/* Main accordion container */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual accordion item */
+.accordion-item {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Accordion header (button) */
+.accordion-header {
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Accordion content (initially hidden) */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  background: white;
+  font-size: 0.95rem;
+}
+
+/* Open state for accordion item */
+.accordion-item.open .accordion-content {
+  padding: 1rem;
+  max-height: 2000px;
+}
+
+/* Nested accordion styles */
+.accordion.nested {
+  margin-left: 1rem;
+  border-left: 3px solid #333;
+  padding-left: 1rem;
+}
