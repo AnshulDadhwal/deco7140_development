@@ -1,0 +1,164 @@
+/* FORMS COMPONENT SKELETON - Reusable form styles */
+
+/* Form Groups */
+.form-group {
+  margin-bottom: var(--space-5);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-dark);
+}
+
+/* Required Field Indicator */
+.required {
+  color: var(--color-accent-red);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Input Fields */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"],
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-3);
+  font-size: 1rem;
+  font-family: var(--font-family-primary);
+  border: 2px solid #BDC3C7;
+  border-radius: 8px;
+  background-color: var(--color-white);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Placeholder Styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #95A5A6;
+  font-style: italic;
+}
+
+/* Focus States */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary-blue);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Focus Visible for Accessibility */
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+  outline: 3px solid var(--color-primary-blue);
+  outline-offset: 2px;
+}
+
+/* Invalid State - Shown when browser validation fails */
+.form-group input:invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--color-accent-red);
+}
+
+/* Valid State */
+.form-group input:valid:not(:placeholder-shown),
+.form-group textarea:valid:not(:placeholder-shown) {
+  border-color: #27AE60;
+}
+
+/* Textarea Specific */
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* File Input */
+.form-group input[type="file"] {
+  padding: var(--space-2);
+  cursor: pointer;
+}
+
+/* Form Help Text */
+.form-help {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--font-size-small);
+  color: var(--color-text-light);
+  line-height: 1.4;
+}
+
+/* Form Actions - Button Container */
+.form-actions {
+  margin-top: var(--space-5);
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+}
+
+/* Form Feedback Messages */
+.form-feedback {
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  border-radius: 8px;
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  display: none;
+}
+
+/* Show feedback when it has specific classes */
+.form-feedback.feedback-success,
+.form-feedback.feedback-error,
+.form-feedback.feedback-loading {
+  display: block;
+}
+
+/* Success Feedback */
+.feedback-success {
+  background-color: #D5F4E6;
+  color: #27AE60;
+  border: 2px solid #27AE60;
+}
+
+/* Error Feedback */
+.feedback-error {
+  background-color: #FADBD8;
+  color: var(--color-accent-red);
+  border: 2px solid var(--color-accent-red);
+}
+
+/* Loading Feedback */
+.feedback-loading {
+  background-color: #EBF5FB;
+  color: var(--color-primary-blue);
+  border: 2px solid var(--color-primary-blue);
+}
+
+/* Responsive Form Adjustments */
+@media (max-width: 768px) {
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions .btn {
+    width: 100%;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .form-group input,
+  .form-group textarea {
+    border-width: 3px;
+  }
+}
+
+/* Reduced Motion for Users Who Prefer It */
+@media (prefers-reduced-motion: reduce) {
+  .form-group input,
+  .form-group textarea,
+  .form-feedback {
+    transition: none;
+  }
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Connect - Global Community Connect</title>
+    
+    <!-- CSS links -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <!-- Mobile Navigation -->
+    <nav id="nav-mobile" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html"><span class="icon">🏠</span></a></li>
+        <li><a href="connect.html" aria-current="page"><span class="icon">🤝</span></a></li>
+        <li><a href="events.html"><span class="icon">📅</span></a></li>
+        <li><a href="opportunities.html"><span class="icon">💼</span></a></li>
+        <li><a href="resources.html"><span class="icon">📚</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- Desktop Navigation -->
+    <nav id="nav-desktop" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="connect.html" aria-current="page">Connect</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="resources.html">Resources</a></li> 
+        <li><a href="implementation_rationale.html">Rationale</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="container">
+        <!-- Page Header -->
+        <header class="section-header">
+          <h1>Connect with Our Community</h1>
+          <p>
+            Join a vibrant network of international students, alumni, and mentors. 
+            Share your experiences, find support, and build meaningful connections 
+            that last beyond your studies.
+          </p>
+        </header>
+
+        <!-- Community Overview Section -->
+        <section class="hero">
+          <h2>Why Join Our Community?</h2>
+          <p class="hero-text">
+            Be part of a welcoming network of people from every background. Share your journey, 
+            discover stories, and connect through shared experiences. Learn, grow, and support 
+            each other as one community that celebrates diversity and belonging.
+          </p>
+        </section>
+
+        <!-- Discussion Board Section -->
+        <section class="section">
+          <h2>Community Discussions</h2>
+          <p class="m-b-4">
+            Connect with others who understand your journey. Ask questions, share advice, 
+            and participate in conversations about academic life, career planning, and cultural experiences.
+          </p>
+          
+          <div class="discussion-preview">
+            <!-- Dynamic discussion list -->
+            <div id="discussion-list">
+              <p class="loading-message">Loading discussions...</p>
+            </div>
+          </div>
+          
+          <div class="text-center m-t-5">
+            <button id="start-discussion-btn" class="btn btn-primary">Start a Discussion</button>
+          </div>
+        </section>
+
+        <!-- Member Highlights Section -->
+        <section class="section">
+          <h2>Community Stories</h2>
+          <p class="m-b-5">
+            Meet members of our global community and hear about their journeys. Every story 
+            is unique, but we're all connected by our shared experiences as international students and alumni.
+          </p>
+          
+          <div class="card-container">
+            <!-- Member Card 1 -->
+            <article class="card">
+              <img src="assets/profile/Maya.jpg" alt="Profile photo of Maya" class="circular-image" />
+              <h3>Maya Chen</h3>
+              <p class="card-meta">University of Queensland • Computer Science</p>
+              <p>
+                "Coming from Malaysia, I was worried about finding my place. This community 
+                helped me connect with others who understood the challenges of adapting to 
+                a new country while pursuing my studies."
+              </p>
+              <a href="#" class="card-link">Read Maya's Story →</a>
+            </article>
+
+            <!-- Member Card 2 -->
+            <article class="card">
+              <img src="assets/profile/Ahmed.png" alt="Profile photo of Ahmed" class="circular-image" />
+              <h3>Ahmed Hassan</h3>
+              <p class="card-meta">QUT • Business Administration</p>
+              <p>
+                "Through this network, I found mentors who guided me through my career transition. 
+                Now I'm giving back by helping other international students navigate their professional paths."
+              </p>
+              <a href="#" class="card-link">Read Ahmed's Story →</a>
+            </article>
+
+            <!-- Member Card 3 -->
+            <article class="card">
+              <img src="assets/profile/Sophia.jpg" alt="Profile photo of Sofia" class="circular-image" />
+              <h3>Sofia Rodriguez</h3>
+              <p class="card-meta">Griffith University • Environmental Science</p>
+              <p>
+                "The cultural events organized by community members helped me celebrate my heritage 
+                while learning about other cultures. It's amazing to be part of such a diverse group."
+              </p>
+              <a href="#" class="card-link">Read Sofia's Story →</a>
+            </article>
+
+            <!-- Member Card 4 -->
+            <article class="card">
+              <img src="assets/profile/Luca.png" alt="Profile photo of Luca" class="circular-image" />
+              <h3>Luca Rossi</h3>
+              <p class="card-meta">UQ • Engineering</p>
+              <p>
+                "I found my study group through this community. We support each other academically 
+                and socially. It made the challenging coursework so much more manageable."
+              </p>
+              <a href="#" class="card-link">Read Luca's Story →</a>
+            </article>
+
+            <!-- Member Card 5 -->
+            <article class="card">
+              <img src="assets/profile/Priya.jpg" alt="Profile photo of Priya" class="circular-image" />
+              <h3>Priya Patel</h3>
+              <p class="card-meta">Bond University • Medicine</p>
+              <p>
+                "This community connected me with alumni working in healthcare. Their advice 
+                was invaluable in helping me understand the Australian medical system and plan my career."
+              </p>
+              <a href="#" class="card-link">Read Priya's Story →</a>
+            </article>
+
+            <!-- Member Card 6 -->
+            <article class="card">
+              <img src="assets/profile/David.jpg" alt="Profile photo of David" class="circular-image" />
+              <h3>David Kim</h3>
+              <p class="card-meta">UQ Alumni • Software Engineer</p>
+              <p>
+                "Even after graduation, I stay connected with this community. It's rewarding to 
+                mentor current students and see them succeed in their own journeys."
+              </p>
+              <a href="#" class="card-link">Read David's Story →</a>
+            </article>
+          </div>
+        </section>
+
+        <!-- Share Your Story CTA -->
+        <section class="section" id="share-story">
+          <div class="hero">
+            <h2>Share Your Story</h2>
+            <p class="hero-text m-b-5">
+              Your experience matters. Share your journey with the community and inspire others 
+              who are navigating similar challenges. Whether it's about academic success, 
+              cultural adaptation, or career transitions, your story can make a difference.
+            </p>
+            <a href="#" class="btn btn-primary">Submit Your Story</a>
+          </div>
+        </section>
+
+        <!-- Join Community CTA -->
+        <section class="section">
+          <div class="text-center">
+            <h2>Ready to Join?</h2>
+            <p class="m-y-4">
+              Become a member and start connecting with international students and alumni 
+              from around the world. It's free and takes less than two minutes.
+            </p>
+            <a href="#" class="btn btn-primary">Join the Community</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Discussion Modal -->
+    <div id="discussion-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modal-title">Start a Discussion</h2>
+          <button id="close-modal" class="close-modal" aria-label="Close modal">✕</button>
+        </div>
+        
+        <form id="discussion-form">
+          <div class="form-group">
+            <label for="person_name">Your Name <span class="required">*</span></label>
+            <input 
+              type="text" 
+              id="person_name" 
+              name="person_name" 
+              required 
+              placeholder="Enter your name"
+              aria-required="true"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="chat_post_title">Discussion Title <span class="required">*</span></label>
+            <input 
+              type="text" 
+              id="chat_post_title" 
+              name="chat_post_title" 
+              required 
+              placeholder="What would you like to discuss?"
+              aria-required="true"
+            />
+            <small class="form-help">Keep it clear and descriptive</small>
+          </div>
+
+          <div class="form-group">
+            <label for="chat_post_content">Your Message <span class="required">*</span></label>
+            <textarea 
+              id="chat_post_content" 
+              name="chat_post_content" 
+              required
+              placeholder="Share your thoughts, questions, or experiences..."
+              aria-required="true"
+            ></textarea>
+            <small class="form-help">Be respectful and constructive in your message</small>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="cancel-btn" class="btn btn-secondary">Cancel</button>
+            <button type="submit" class="btn btn-primary">Post Discussion</button>
+          </div>
+          
+          <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/connect.js"></script>
+  </body>
+</html>

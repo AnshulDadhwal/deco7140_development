@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* CSS Custom Properties (Variables) */
+:root {
+  /* Color Scheme */
+  --color-primary-dark: #2c3e50; /* Primary Dark for headers */
+  --color-primary-blue: #3498db; /* Primary Blue for interactive elements */
+  --color-light-grey: #ecf0f1; /* Light Grey for backgrounds */
+  --color-accent-red: #e74c3c; /* Accent Red for alerts */
+  --color-white: #ffffff;
+  --color-text: #2c3e50;
+  --color-text-light: #7f8c8d;
+
+  /* Typography */
+  --font-family-primary: "Roboto", sans-serif;
+
+  --font-size-h1: 2.25rem; /* 36px - Mobile */
+  --font-size-h2: 1.75rem; /* 28px - Mobile */
+  --font-size-h3: 1.375rem; /* 22px - Mobile */
+  --font-size-base: 1rem; /* 16px - Mobile */
+  --font-size-small: 0.875rem; /* 14px */
+
+  --line-height-base: 1.6;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Spacing Scale */
+  --space-0: 0;
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.5rem; /* 24px */
+  --space-6: 2rem; /* 32px */
+  --space-7: 3rem; /* 48px */
+  --space-8: 4rem; /* 64px */
+}
+
+/* Desktop Typography Adjustments */
+@media (min-width: 768px) {
+  :root {
+    --font-size-h1: 3.5rem; /* 56px - Desktop */
+    --font-size-h2: 2.5rem; /* 40px - Desktop */
+    --font-size-h3: 1.875rem; /* 30px - Desktop */
+    --font-size-base: 1.125rem; /* 18px - Desktop */
+  }
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-text);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-normal);
+  margin: 0;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+    padding-top: 60px;
+  }
+}
+
+/* Typography Styles */
+h1 {
+  font-size: var(--font-size-h1);
+  color: var(--color-primary-dark);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin: 0 0 var(--space-4) 0;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-primary-dark);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+  margin: var(--space-6) 0 var(--space-4) 0;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+  margin: var(--space-5) 0 var(--space-3) 0;
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+/* Links */
+a {
+  color: var(--color-primary-blue);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-primary-dark);
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-primary-blue);
+  outline-offset: 2px;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-light {
+  color: var(--color-text-light);
+}
+
+/* Spacing Helpers */
+.m-0 {
+  margin: var(--space-0);
+}
+.m-1 {
+  margin: var(--space-1);
+}
+.m-2 {
+  margin: var(--space-2);
+}
+.m-3 {
+  margin: var(--space-3);
+}
+.m-4 {
+  margin: var(--space-4);
+}
+.m-5 {
+  margin: var(--space-5);
+}
+.m-6 {
+  margin: var(--space-6);
+}
+.m-7 {
+  margin: var(--space-7);
+}
+.m-8 {
+  margin: var(--space-8);
+}
+
+.m-t-0 {
+  margin-top: var(--space-0);
+}
+.m-t-3 {
+  margin-top: var(--space-3);
+}
+.m-t-4 {
+  margin-top: var(--space-4);
+}
+.m-t-5 {
+  margin-top: var(--space-5);
+}
+.m-t-6 {
+  margin-top: var(--space-6);
+}
+
+.m-b-3 {
+  margin-bottom: var(--space-3);
+}
+.m-b-4 {
+  margin-bottom: var(--space-4);
+}
+.m-b-5 {
+  margin-bottom: var(--space-5);
+}
+.m-b-6 {
+  margin-bottom: var(--space-6);
+}
+
+.m-y-3 {
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+.m-y-4 {
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+.m-y-5 {
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.p-4 {
+  padding: var(--space-4);
+}
+.p-5 {
+  padding: var(--space-5);
+}
+.p-6 {
+  padding: var(--space-6);
+}

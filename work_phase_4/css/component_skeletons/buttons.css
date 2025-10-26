@@ -1,0 +1,126 @@
+/* BUTTONS COMPONENT SKELETON - Reusable button styles */
+
+/* Base Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  
+  /* Typography */
+  font-family: var(--font-family-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.5;
+  
+  /* Visual */
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  
+  /* Transitions for smooth interactions */
+  transition: all 0.3s ease;
+  
+  /* Ensure buttons are accessible */
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Remove default button styling */
+.btn:focus {
+  outline: none;
+}
+
+/* Accessible focus state - visible for keyboard navigation */
+.btn:focus-visible {
+  outline: 3px solid var(--color-primary-blue);
+  outline-offset: 2px;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  border-color: var(--color-primary-blue);
+}
+
+/* Hover State - provides visual feedback */
+.btn-primary:hover:not(:disabled) {
+  background-color: #2980B9; /* Darker blue */
+  border-color: #2980B9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Active/Pressed State - simulates physical button press */
+.btn-primary:active:not(:disabled) {
+  background-color: #21618C; /* Even darker */
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary-blue);
+  border-color: var(--color-primary-blue);
+  border-width: 2px;
+}
+
+/* Hover State */
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Active/Pressed State */
+.btn-secondary:active:not(:disabled) {
+  background-color: #2980B9;
+  border-color: #2980B9;
+  transform: translateY(0) scale(0.98);
+}
+
+/* Disabled State */
+.btn:disabled,
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  /* Remove all hover effects */
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Icon Button */
+.btn-icon {
+  padding: 0.5rem;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon:hover:not(:disabled) {
+  background-color: var(--color-light-grey);
+  transform: scale(1.1);
+}
+
+.btn-icon:active:not(:disabled) {
+  background-color: #BDC3C7;
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .btn {
+    /* Larger touch targets on mobile */
+    padding: 0.875rem 1.75rem;
+    font-size: 1.0625rem;
+  }
+}

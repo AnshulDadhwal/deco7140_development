@@ -1,0 +1,105 @@
+/* CARDS COMPONENT SKELETON - Reusable card styles */
+
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: var(--space-5) 0;
+}
+
+/* Individual Card */
+.card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-light-grey);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Card Hover Effect */
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Card Heading */
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--color-primary-dark);
+}
+
+/* Card Paragraph */
+.card p {
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* Card Meta Information */
+.card-meta {
+  font-size: var(--font-size-small);
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+/* Card Link */
+.card-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--color-primary-blue);
+  display: inline-block;
+  margin-top: auto;
+  align-self: flex-start;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover,
+.card-link:focus {
+  text-decoration: underline;
+  color: var(--color-primary-dark);
+}
+
+/* Circular Image for Member Cards */
+.circular-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 0 auto var(--space-3) auto;
+  border: 3px solid var(--color-light-grey);
+}
+
+/* Desktop Card Layout - Grid */
+@media (min-width: 768px) {
+  .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: calc(33.33% - 1rem);
+    margin-bottom: var(--space-4);
+  }
+}
+
+/* Two Column Layout Option */
+.card-container.two-column .card {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .card-container.two-column .card {
+    width: calc(50% - 0.75rem);
+  }
+}
+
+/* Single Column Layout Option */
+.card-container.single-column .card {
+  width: 100%;
+}

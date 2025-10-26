@@ -1,0 +1,203 @@
+/* COMPONENTS - Import component skeletons and page-specific styles */
+
+/* Import Reusable Component Skeletons */
+@import './component_skeletons/buttons.css';
+@import './component_skeletons/cards.css';
+@import './component_skeletons/forms.css';
+@import './component_skeletons/modal.css';
+
+/* NAVIGATION COMPONENTS */
+
+/* Mobile Navigation - Bottom Bar */
+#nav-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-primary-blue);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0;
+}
+
+#nav-mobile ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#nav-mobile ul li {
+  flex: 1;
+  text-align: center;
+}
+
+#nav-mobile ul li a {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--color-white);
+  transition: background-color 0.3s ease;
+}
+
+#nav-mobile ul li a:hover,
+#nav-mobile ul li a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#nav-mobile ul li a[aria-current="page"] {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Desktop Navigation - Top Bar */
+#nav-desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+  padding: 0;
+}
+
+#nav-desktop ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#nav-desktop ul li a {
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: var(--color-white);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#nav-desktop ul li a:hover,
+#nav-desktop ul li a:focus {
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+}
+
+#nav-desktop ul li a[aria-current="page"] {
+  font-weight: var(--font-weight-bold);
+  border-bottom: 3px solid var(--color-primary-blue);
+}
+
+/* Show desktop nav on larger screens */
+@media (min-width: 768px) {
+  #nav-desktop {
+    display: block;
+  }
+
+  #nav-mobile {
+    display: none;
+  }
+}
+
+/* HERO SECTION */
+.hero {
+  background-color: var(--color-light-grey);
+  padding: var(--space-6) var(--space-4);
+  border-radius: 8px;
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.hero-text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* SECTION STYLES */
+.section {
+  margin-bottom: var(--space-7);
+}
+
+.section-header {
+  margin-bottom: var(--space-5);
+}
+
+/* DISCUSSION BOARD SPECIFIC STYLES */
+.discussion-preview {
+  background-color: var(--color-light-grey);
+  padding: var(--space-5);
+  border-radius: 8px;
+  border-left: 4px solid var(--color-primary-blue);
+}
+
+.discussion-item {
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid #BDC3C7;
+}
+
+.discussion-item:last-child {
+  border-bottom: none;
+}
+
+.discussion-title {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-2);
+  font-size: 1.125rem;
+}
+
+.discussion-excerpt {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  margin: var(--space-2) 0;
+}
+
+.discussion-meta {
+  font-size: var(--font-size-small);
+  color: var(--color-text-light);
+}
+
+/* UTILITY STATES */
+.loading-message,
+.empty-state,
+.error-state {
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+.empty-state {
+  background-color: var(--color-light-grey);
+  border-radius: 8px;
+}
+
+.error-state {
+  background-color: #FADBD8;
+  border: 1px solid var(--color-accent-red);
+  border-radius: 8px;
+}
+
+.text-danger {
+  color: var(--color-accent-red);
+  font-weight: var(--font-weight-medium);
+}
+
+/* RESPONSIVE IMAGES */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
