@@ -139,6 +139,21 @@
   margin-bottom: var(--space-5);
 }
 
+/* Breadcrumb component */
+.breadcrumb {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
 /* DISCUSSION BOARD SPECIFIC STYLES */
 .discussion-preview {
   background-color: var(--color-light-grey);
