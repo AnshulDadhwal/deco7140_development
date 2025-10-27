@@ -97,6 +97,11 @@
   border-bottom: 3px solid var(--color-primary-blue);
 }
 
+#nav-desktop .join-btn {
+  margin: var(--space-2) 0;
+  padding: var(--space-2) var(--space-4);
+}
+
 /* Show desktop nav on larger screens */
 @media (min-width: 768px) {
   #nav-desktop {
