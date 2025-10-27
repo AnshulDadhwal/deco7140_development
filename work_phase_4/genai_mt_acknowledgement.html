@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work Phase 4 - GenAI MT Acknowledgement</title>
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <!-- Mobile Navigation -->
+    <nav id="nav-mobile" aria-label="Main Navigation">
+      <ul>
+        <li>
+          <a href="index.html"><span class="icon">🏠</span></a>
+        </li>
+        <li>
+          <a href="connect.html"><span class="icon">🤝</span></a>
+        </li>
+        <li>
+          <a href="events.html"><span class="icon">📅</span></a>
+        </li>
+        <li>
+          <a href="opportunities.html"><span class="icon">💼</span></a>
+        </li>
+        <li>
+          <a href="resources.html"><span class="icon">📚</span></a>
+        </li>
+        <li>
+          <a href="join.html"><span class="icon">👤</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Desktop Navigation -->
+    <nav id="nav-desktop" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="connect.html">Connect</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="implementation_rationale.html">Rationale</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="container">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <a href="index.html">Home</a> /
+          <span aria-current="page">GenAI MT Acknowledgement</span>
+        </nav>
+        <header>
+          <h1>GenAI MT Acknowledgement</h1>
+          <p class="m-y-4">
+            Documentation of where I used Generative AI or Machine Translation
+            tools, the purpose behind each use, and how I maintained authorship
+            and control throughout Work Phase 4.
+          </p>
+        </header>
+
+        <section class="m-y-5">
+          <h2>Usage Log (WP4)</h2>
+          <div class="table-scroll">
+            <table class="genai-table">
+              <thead>
+                <tr>
+                  <th>Tool</th>
+                  <th>What For</th>
+                  <th>Where in WP4</th>
+                  <th>When</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ChatGPT</td>
+                  <td>
+                    Understanding JavaScript module patterns and ES6
+                    import/export syntax for code organization.
+                  </td>
+                  <td>js/modules/ folder structure</td>
+                  <td>Wk10</td>
+                </tr>
+                <tr>
+                  <td>ChatGPT</td>
+                  <td>
+                    Learning best practices for accessible modal implementations
+                    including ARIA attributes and focus management.
+                  </td>
+                  <td>Discussion modal in connect.html</td>
+                  <td>Wk11</td>
+                </tr>
+                <tr>
+                  <td>ChatGPT</td>
+                  <td>
+                    Clarifying API header requirements and troubleshooting
+                    GET/POST request methods for the DECO7140 API.
+                  </td>
+                  <td>getData.js and postFormData.js modules</td>
+                  <td>Wk10-11</td>
+                </tr>
+                <tr>
+                  <td>ChatGPT</td>
+                  <td>
+                    Debugging date formatting functions and understanding
+                    JavaScript Date object manipulation.
+                  </td>
+                  <td>formatDate() function in connect.js</td>
+                  <td>Wk11</td>
+                </tr>
+                <tr>
+                  <td>GitHub Copilot</td>
+                  <td>
+                    Generating boilerplate code for reusable CSS components like
+                    buttons, cards, forms, and modals.
+                  </td>
+                  <td>component_skeletons/ directory</td>
+                  <td>Wk10-11</td>
+                </tr>
+                <tr>
+                  <td>GitHub Copilot</td>
+                  <td>
+                    Suggesting code structure for accordion functionality with
+                    open/close states.
+                  </td>
+                  <td>accordion.js module and about.css</td>
+                  <td>Wk11</td>
+                </tr>
+                <tr>
+                  <td>GitHub Copilot</td>
+                  <td>
+                    Providing inline code comments and documentation strings for
+                    functions.
+                  </td>
+                  <td>All JavaScript files</td>
+                  <td>Wk10-11</td>
+                </tr>
+                <tr>
+                  <td>Grammarly</td>
+                  <td>
+                    Refining content for clarity, grammar, and readability in
+                    HTML page content.
+                  </td>
+                  <td>
+                    About page feature descriptions, Connect page introductions
+                  </td>
+                  <td>Wk10-11</td>
+                </tr>
+                <tr>
+                  <td>ChatGPT</td>
+                  <td>
+                    Generating placeholder profile images and hero images for
+                    the website.
+                  </td>
+                  <td>assets/images/</td>
+                  <td>Wk10</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="m-y-5">
+          <h2>Reflective Acknowledgement</h2>
+
+          <h3>Context and Purpose</h3>
+          <p class="m-y-2">
+            I used GenAI tools to help me build the Global Community Connect
+            website. ChatGPT explained how to structure CSS with component
+            skeletons and how JavaScript modules work with imports and exports.
+            It helped me fix issues with the DECO7140 API by showing how GET and
+            POST requests use headers differently. GitHub Copilot filled in
+            repetitive CSS for cards, buttons, and forms. Grammarly helped me
+            make my writing clearer. ChatGPT also made simple placeholder images
+            for profiles and the hero section.
+          </p>
+
+          <h3>Critical Decision-Making and Ownership</h3>
+          <p class="m-y-2">
+            I made all the main decisions myself. I only used ideas from ChatGPT
+            when they made sense for my site. I tested every JavaScript module
+            and rewrote code to make sure I understood it. I checked all ARIA
+            suggestions against accessibility guides. For Copilot’s CSS, I
+            changed styles to match my design and added my own responsive rules.
+            The accordion code started as a base, but I wrote the logic, focus
+            states, and transitions myself. The generated images are only
+            placeholders, not real photos.
+          </p>
+
+          <h3>Accuracy, Bias, and Ethical Awareness</h3>
+          <p class="m-y-2">
+            I checked everything against course notes, MDN docs, and WCAG
+            standards. I tested every API endpoint to confirm the headers
+            worked. I added error handling for failed requests. I used a
+            keyboard and screen reader simulation to test accessibility. The
+            AI-generated images are generic and don’t represent real people. I
+            made sure the site’s content about international students stayed
+            respectful and realistic.
+          </p>
+
+          <h3>Privacy and Sensitive Content</h3>
+          <p class="m-y-2">
+            I only used public or technical questions with GenAI tools. I never
+            shared student numbers, keys, or private data. All API tests used
+            fake names and safe sample data. The contact email uses my student
+            account, and no user data is stored.
+          </p>
+
+          <h3>Reflection on Learning</h3>
+          <p class="m-y-2">
+            These tools actually helped me learn better. ChatGPT showed me how
+            to organize large codebases with clear structure. Copilot exposed me
+            to new CSS patterns and naming ideas. Debugging the API helped me
+            understand network responses and errors. Building the accordion
+            improved my event handling skills. Most of all, I learned to
+            question every suggestion and use AI as a helper, not a shortcut.
+          </p>
+
+          <h3>Attribution and Final Statement</h3>
+          <p class="m-y-2">
+            I used ChatGPT, GitHub Copilot, and Grammarly for Work Phase 4.
+            ChatGPT gave me explanations and code guidance. Copilot suggested
+            patterns for styling and layout. Grammarly improved my text. I made
+            every decision, tested all code, and ensured it met accessibility
+            and design goals. The final work reflects my understanding, with
+            GenAI tools as support, not authors.
+          </p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

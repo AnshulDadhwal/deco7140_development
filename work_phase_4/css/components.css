@@ -221,3 +221,31 @@ img {
   height: auto;
   display: block;
 }
+
+/* GenAI Acknowledgement Styling*/
+.genai-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.genai-table th,
+.genai-table td {
+  border: 1px solid var(--color-primary-blue);
+  padding: 6px 10px;
+  text-align: left;
+}
+.genai-table th {
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+}
+
+.genai-table a {
+  color: var(--color-primary-blue);
+  text-decoration: underline;
+}
+
+.genai-table a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+}
