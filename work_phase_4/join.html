@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Join - Global Community Connect</title>
+    
+    <!-- CSS links -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/page_css/join.css" />
+  </head>
+  <body>
+    <!-- Mobile Navigation -->
+    <nav id="nav-mobile" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html"><span class="icon">🏠</span></a></li>
+        <li><a href="connect.html"><span class="icon">🤝</span></a></li>
+        <li><a href="events.html"><span class="icon">📅</span></a></li>
+        <li><a href="opportunities.html"><span class="icon">💼</span></a></li>
+        <li><a href="resources.html"><span class="icon">📚</span></a></li>
+        <li><a href="join.html" aria-current="page"><span class="icon">👤</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- Desktop Navigation -->
+    <nav id="nav-desktop" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="connect.html">Connect</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="implementation_rationale.html">Rationale</a></li>
+        <li><a href="join.html" class="btn btn-primary join-btn" aria-current="page">Join Now</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="container">
+        <!-- Page Header -->
+        <header class="section-header">
+          <h1>Join Our Community</h1>
+          <p>
+            Become part of a vibrant network of international students in Brisbane. 
+            Registration is free and takes less than two minutes.
+          </p>
+        </header>
+
+        <!-- Join Form Section -->
+        <section class="section form-section">
+          <form id="community-form" class="join-form">
+            <div class="form-group">
+              <label for="name">Full Name <span class="required">*</span></label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                placeholder="Enter your full name"
+                aria-required="true"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                placeholder="your.email@example.com"
+                aria-required="true"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell Us About Yourself (Optional)</label>
+              <textarea 
+                id="message" 
+                name="message"
+                placeholder="Share a bit about yourself..."
+                rows="4"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="photo">Profile Photo (Optional)</label>
+              <input 
+                type="file" 
+                id="photo" 
+                name="photo"
+                accept="image/*"
+              />
+              <small class="form-help">Max file size: 10MB</small>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-large">Join the Community</button>
+            </div>
+
+            <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/join.js"></script>
+  </body>
+</html>

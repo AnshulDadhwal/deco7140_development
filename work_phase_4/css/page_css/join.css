@@ -1,0 +1,43 @@
+/* JOIN PAGE SPECIFIC STYLES */
+
+/* Form Section */
+.form-section {
+  max-width: 600px;
+  margin: 0 auto var(--space-7) auto;
+}
+
+.join-form {
+  background-color: var(--color-white);
+  padding: var(--space-6);
+  border: 2px solid var(--color-light-grey);
+  border-radius: 8px;
+}
+
+/* Large Button */
+.btn-large {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+}
+
+/* Desktop Responsive */
+@media (min-width: 768px) {
+  .join-form {
+    padding: var(--space-7);
+  }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+  }
+}
+
+/* Accessibility - High Contrast Mode */
+@media (prefers-contrast: high) {
+  .join-form {
+    border-width: 3px;
+  }
+}
