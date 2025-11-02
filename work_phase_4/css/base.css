@@ -8,7 +8,6 @@
   --color-accent-red: #e74c3c; /* Accent Red for alerts */
   --color-white: #ffffff;
   --color-text: #1a252f;
-  --color-text-light: #7f8c8d;
 
   /* Typography */
   --font-family-primary: "Roboto", sans-serif;
@@ -124,10 +123,6 @@ button:focus-visible {
 /* Utility Classes */
 .text-center {
   text-align: center;
-}
-
-.text-light {
-  color: var(--color-text-light);
 }
 
 /* Accessibility: Visually Hidden Class */

@@ -10,7 +10,7 @@
 }
 
 .events-intro {
-  color: var(--color-text-light);
+  color: var(--color-text);
   font-size: 1.0625rem;
   line-height: 1.6;
 }
@@ -89,7 +89,7 @@
 
 .event-card .event-meta {
   font-size: var(--font-size-small);
-  color: var(--color-text-light);
+  color: var(--color-text);
   margin-bottom: var(--space-2);
 }
 
@@ -139,7 +139,7 @@
 
 .submit-event-intro {
   text-align: center;
-  color: var(--color-text-light);
+  color: var(--color-text);
   margin-bottom: var(--space-5);
 }
 
@@ -179,7 +179,7 @@
 }
 
 .past-events-intro {
-  color: var(--color-text-light);
+  color: var(--color-text);
   margin-bottom: var(--space-5);
   text-align: center;
 }
@@ -215,7 +215,7 @@
 
 .past-event-card .event-location-text {
   font-size: var(--font-size-small);
-  color: var(--color-text-light);
+  color: var(--color-text);
   margin-bottom: var(--space-2);
 }
 
@@ -234,7 +234,7 @@
 }
 
 .empty-events p {
-  color: var(--color-text-light);
+  color: var(--color-text);
   font-size: 1.125rem;
 }
 
@@ -242,7 +242,7 @@
 .loading-events {
   text-align: center;
   padding: var(--space-7);
-  color: var(--color-text-light);
+  color: var(--color-text);
   font-style: italic;
 }
 
