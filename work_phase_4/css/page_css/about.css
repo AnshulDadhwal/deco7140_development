@@ -72,7 +72,7 @@
 }
 
 .feature-list strong {
-  color: #155A83; /* Very dark blue for proper contrast - 7.01:1 ratio */
+  color: #155A83; /* Very dark blue for proper contrast */
   display: block;
   margin-bottom: var(--space-2);
   font-weight: var(--font-weight-bold);
