@@ -2,13 +2,12 @@
 
 /* CSS Custom Properties (Variables) */
 :root {
-  /* Color Scheme */
-  --color-primary-dark: #2c3e50; /* Primary Dark for headers */
-  --color-primary-blue: #3498db; /* Primary Blue for interactive elements */
+  --color-primary-dark: #1a252f; /* Very dark blue-grey for text (was #2c3e50) */
+  --color-primary-blue: #1E6FA8; /* Darker blue for buttons and interactive elements (was #3498db) */
   --color-light-grey: #ecf0f1; /* Light Grey for backgrounds */
   --color-accent-red: #e74c3c; /* Accent Red for alerts */
   --color-white: #ffffff;
-  --color-text: #2c3e50;
+  --color-text: #1a252f;
   --color-text-light: #7f8c8d;
 
   /* Typography */
@@ -129,6 +128,20 @@ button:focus-visible {
 
 .text-light {
   color: var(--color-text-light);
+}
+
+/* Accessibility: Visually Hidden Class */
+/* Hides content visually but keeps it available for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* Spacing Helpers */

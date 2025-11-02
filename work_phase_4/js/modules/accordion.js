@@ -9,7 +9,13 @@ function initAccordion(containerSelector) {
     headers.forEach((header) => {
       header.addEventListener("click", () => {
         const item = header.parentElement;
+        const isOpen = item.classList.contains("open");
+        
+        // Toggle the open class
         item.classList.toggle("open");
+        
+        // Update aria-expanded attribute for accessibility
+        header.setAttribute("aria-expanded", !isOpen);
       });
     });
   });

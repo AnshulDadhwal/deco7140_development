@@ -46,15 +46,15 @@
 
 /* Hover State - provides visual feedback */
 .btn-primary:hover:not(:disabled) {
-  background-color: #2980B9; /* Darker blue */
-  border-color: #2980B9;
+  background-color: #18527A;
+  border-color: #18527A;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
 }
 
 /* Active/Pressed State - simulates physical button press */
 .btn-primary:active:not(:disabled) {
-  background-color: #21618C; /* Even darker */
+  background-color: #134561;
   transform: translateY(0) scale(0.98);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -77,8 +77,8 @@
 
 /* Active/Pressed State */
 .btn-secondary:active:not(:disabled) {
-  background-color: #2980B9;
-  border-color: #2980B9;
+  background-color: #18527A;
+  border-color: #18527A;
   transform: translateY(0) scale(0.98);
 }
 

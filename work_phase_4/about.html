@@ -18,12 +18,12 @@
     <!-- Mobile Navigation -->
     <nav id="nav-mobile" aria-label="Main Navigation">
       <ul>
-        <li><a href="index.html"><span class="icon">🏠</span></a></li>
-        <li><a href="connect.html"><span class="icon">🤝</span></a></li>
-        <li><a href="events.html"><span class="icon">📅</span></a></li>
-        <li><a href="opportunities.html"><span class="icon">💼</span></a></li>
-        <li><a href="resources.html"><span class="icon">📚</span></a></li>
-        <li><a href="join.html"><span class="icon">👤</span></a></li>
+        <li><a href="index.html"><span class="icon">🏠</span><span class="visually-hidden">Home</span></a></li>
+        <li><a href="connect.html"><span class="icon">🤝</span><span class="visually-hidden">Connect</span></a></li>
+        <li><a href="events.html"><span class="icon">📅</span><span class="visually-hidden">Events</span></a></li>
+        <li><a href="opportunities.html"><span class="icon">💼</span><span class="visually-hidden">Opportunities</span></a></li>
+        <li><a href="resources.html"><span class="icon">📚</span><span class="visually-hidden">Resources</span></a></li>
+        <li><a href="join.html"><span class="icon">👤</span><span class="visually-hidden">Join</span></a></li>
       </ul>
     </nav>
 
@@ -43,7 +43,7 @@
       <div class="container">
         <!-- Breadcrumb Navigation -->
         <nav aria-label="Breadcrumb" class="breadcrumb">
-          <a href="index.html">Home</a> / 
+          <a href="index.html">Home</a> <span aria-hidden="true">/</span> 
           <span aria-current="page">About Us</span>
         </nav>
 
@@ -77,8 +77,8 @@
           <div class="accordion">
             <!-- Connect Accordion Item -->
             <div class="accordion-item">
-              <button class="accordion-header">▷ 🤝 Connect</button>
-              <div class="accordion-content">
+              <button class="accordion-header" aria-expanded="false" aria-controls="accordion-connect">▷ 🤝 Connect</button>
+              <div class="accordion-content" id="accordion-connect">
                 <p class="m-y-3">
                   Build meaningful relationships with fellow international students, alumni, and mentors 
                   who understand the unique challenges and opportunities of studying abroad. Our Connect 
@@ -101,8 +101,8 @@
 
             <!-- Events Accordion Item -->
             <div class="accordion-item">
-              <button class="accordion-header">▷ 📅 Events</button>
-              <div class="accordion-content">
+              <button class="accordion-header" aria-expanded="false" aria-controls="accordion-events">▷ 📅 Events</button>
+              <div class="accordion-content" id="accordion-events">
                 <p class="m-y-3">
                   Participate in a vibrant calendar of events designed to help you connect, learn, and 
                   celebrate your culture while discovering new ones. From casual meetups to professional 
@@ -128,8 +128,8 @@
 
             <!-- Resources Accordion Item -->
             <div class="accordion-item">
-              <button class="accordion-header">▷ 📚 Resources</button>
-              <div class="accordion-content">
+              <button class="accordion-header" aria-expanded="false" aria-controls="accordion-resources">▷ 📚 Resources</button>
+              <div class="accordion-content" id="accordion-resources">
                 <p class="m-y-3">
                   Navigate life in Brisbane with confidence using our comprehensive guides and resources. 
                   We've compiled practical information to help you with everyday challenges, written in 
@@ -156,8 +156,8 @@
 
             <!-- Opportunities Accordion Item -->
             <div class="accordion-item">
-              <button class="accordion-header">▷ 💼 Opportunities</button>
-              <div class="accordion-content">
+              <button class="accordion-header" aria-expanded="false" aria-controls="accordion-opportunities">▷ 💼 Opportunities</button>
+              <div class="accordion-content" id="accordion-opportunities">
                 <p class="m-y-3">
                   Advance your career and personal development through opportunities specifically curated 
                   for international students. We understand visa restrictions and help you find pathways 

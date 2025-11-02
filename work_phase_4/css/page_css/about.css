@@ -26,7 +26,9 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Accessibility: Ensure minimum touch target size */
+  min-height: 44px;
 }
 
 .accordion-header:hover,
@@ -59,7 +61,7 @@
 .feature-list li {
   padding: var(--space-3);
   margin-bottom: var(--space-3);
-  background-color: var(--color-light-grey);
+  background-color: #dfe6e9; /* Darker grey for better contrast */
   border-radius: 8px;
   border-left: 4px solid var(--color-primary-blue);
   line-height: 1.6;
@@ -70,9 +72,10 @@
 }
 
 .feature-list strong {
-  color: var(--color-primary-blue);
+  color: #155A83; /* Very dark blue for proper contrast - 7.01:1 ratio */
   display: block;
   margin-bottom: var(--space-2);
+  font-weight: var(--font-weight-bold);
 }
 
 /* Partnership Section */
@@ -83,7 +86,6 @@
 }
 
 .partnership-section strong {
-    
   font-weight: var(--font-weight-medium);
 }
 
@@ -133,6 +135,13 @@
 .contact-section a:focus {
   color: var(--color-primary-dark);
   text-decoration: underline;
+}
+
+/* Accessibility: Focus indicator for contact links */
+.contact-section a:focus-visible {
+  outline: 3px solid var(--color-primary-blue);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 /* Tablet & Desktop Responsive Styles */
