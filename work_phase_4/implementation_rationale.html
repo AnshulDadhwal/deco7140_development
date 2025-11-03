@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work Phase 4 - Implementation Rationale</title>
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <!-- Mobile Navigation -->
+    <nav id="nav-mobile" aria-label="Main Navigation">
+      <ul>
+        <li>
+          <a href="index.html"><span class="icon">🏠</span></a>
+        </li>
+        <li>
+          <a href="connect.html"><span class="icon">🤝</span></a>
+        </li>
+        <li>
+          <a href="events.html"><span class="icon">📅</span></a>
+        </li>
+        <li>
+          <a href="opportunities.html"><span class="icon">💼</span></a>
+        </li>
+        <li>
+          <a href="resources.html"><span class="icon">📚</span></a>
+        </li>
+        <li>
+          <a href="join.html"><span class="icon">👤</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Desktop Navigation -->
+    <nav id="nav-desktop" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="connect.html">Connect</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li>
+          <a href="join.html" class="btn btn-primary join-btn">Join Now</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="container">
+        <header>
+          <h1>Implementation Rationale</h1>
+          <p class="m-y-4">
+            This document explains the design and development decisions made
+            during the implementation of the Global Community Connect website,
+            demonstrating how the final product aligns with client goals, user
+            needs, accessibility standards, and ethical principles.
+          </p>
+        </header>
+
+        <!-- TABLE OF CONTENTS -->
+        <section class="section">
+          <h2>Table of Contents</h2>
+          <nav aria-label="Page sections">
+            <ol>
+              <li>
+                <a href="#alignment">Alignment with Client and User Needs</a>
+              </li>
+              <li>
+                <a href="#accessibility"
+                  >Accessibility and Ethical Considerations</a
+                >
+              </li>
+              <li>
+                <a href="#variations">Variations from A3 Design Proposal</a>
+              </li>
+              <li><a href="#challenges">Challenges and Strategies</a></li>
+              <li><a href="#audit">Accessibility Audit Results</a></li>
+              <li><a href="#github">GitHub Repository</a></li>
+            </ol>
+          </nav>
+        </section>
+
+        <!-- SECTION 1: ALIGNMENT WITH CLIENT AND USER NEEDS -->
+        <section id="alignment" class="section">
+          <h2>1. Alignment with Client and User Needs</h2>
+
+          <h3>1.1 Meeting Connect Communities Initiative Goals</h3>
+          <p>
+            The Global Community Connect website brings the Connect Communities
+            Initiative’s vision to life by creating a digital space that
+            genuinely helps international students in Brisbane connect, share,
+            and belong. The site directly supports CCI’s mission to build social
+            cohesion by providing a central online hub where people can access
+            community resources, attend events, and exchange experiences in a
+            safe, inclusive environment.
+            <br />
+            The Connect page is designed as a dynamic discussion board powered
+            by the DECO API, where users can share stories, advice, and
+            reflections. Each post shows the author’s name and timestamp to
+            create authenticity and accountability, while an accessible modal
+            form allows users to contribute easily. This setup encourages real,
+            human conversations rather than anonymous, impersonal posts.
+            <br />
+            The Events page acts as the resource-sharing centre of the site. It
+            highlights upcoming community events ranging from cultural
+            celebrations to career development workshops and includes a simple
+            submission form where users can propose new events. This feature
+            empowers the community to take ownership of the space and reflect
+            the initiative’s core principle of “celebrating and supporting the
+            unique identities of communities”. Importantly, all activities are
+            non-commercial, ensuring that the platform remains focused on public
+            good rather than profit, just as the client brief requires.
+          </p>
+
+          <h3>1.2 Addressing Identified User Needs</h3>
+
+          <h4>User Need 1: Central Hub for Resources and Events</h4>
+          <p>
+            From the user stories, Luca expressed frustration with information
+            being scattered across too many platforms and wanted verified,
+            concise listings rather than long, confusing pages.
+            <br />
+            To meet this, the Events page presents all information through
+            consistent, easy-to-scan cards that clearly show the date, location,
+            and a short description. The design uses visual hierarchy like large
+            date badges, clear titles, and brief 30-40 word summaries so users
+            can get the details at a glance. The About page uses an accordion
+            layout that allows people to expand only what they need, avoiding
+            cognitive overload.
+          </p>
+
+          <h4>User Need 2: Safe Community Connections</h4>
+          <p>
+            Safety and trust were recurring concerns in the user interviews.
+            Maya worried about scams when searching for accommodation or jobs,
+            while Chen reviewed data plug-ins carefully before subscribing to
+            anything. Ahmed wanted transparency through descriptive links
+            instead of vague “click here” text. These stories show that users
+            will only engage if they feel confident their data is handled
+            responsibly and that the community is genuine.
+            <br />
+            To address this, the Connect page includes clear author names and
+            timestamps, giving every post a sense of traceability. The Community
+            Stories section highlights detailed member profiles that show names,
+            degrees, and universities, helping users verify authenticity. Forms
+            on the site only collect essential data (name and email), as
+            identified in the ethics analysis, which avoids sensitive
+            information like income or sexuality that could cause profiling or
+            harm. Additionally, we provided description for our 'Join Us' call
+            to action button in 'Connect' to clarify its purpose and encourage
+            participation.
+          </p>
+
+          <h4>User Need 3: Accessible Information</h4>
+          <p>
+            Accessibility came through strongly from the user stories. Ahmed, a
+            screen-reader user, struggled with unlabeled forms and missing alt
+            text, while Sofía faced issues with data-heavy pages that drained
+            her limited mobile plan. Chen also appreciated simple, clear English
+            even though he was fluent, showing that accessible language helps
+            everyone.
+            <br />
+            The website’s mobile-first CSS design ensures performance and
+            accessibility for all users. It follows WCAG 2.2 AA guidelines by
+            maintaining strong colour contrast between text and background and
+            scaling typography responsively. Semantic HTML headings (i.e. h1,
+            h2, h3) let screen-reader users navigate logically, and ARIA
+            attributes support accessibility feedback for dynamic updates. Every
+            image includes meaningful alt text such as “Profile photo of Maya”
+            instead of generic phrases. To assist users like Sofía, the site
+            uses lightweight, optimised images and emoji-based icons instead of
+            SVG files, reducing bandwidth use. The accordion components load
+            content only when opened, further saving data and improving
+            responsiveness.
+          </p>
+        </section>
+
+        <!-- SECTION 2: ACCESSIBILITY AND ETHICAL CONSIDERATIONS -->
+        <section id="accessibility" class="section">
+          <h2>2. Accessibility and Ethical Considerations</h2>
+          <h3>2.1 WCAG 2.2 Level AA Compliance</h3>
+          <p>
+            The website meets WCAG 2.2 Level AA standards through deliberate
+            choices in structure, colour, and interaction. The text colour
+            against a white background gives strong contrast, and the blue used
+            for links and buttons remains readable while still matching the
+            visual identity. All interactive elements use at least 44 pixels of
+            touch area, which helps users like Ahmed who rely on screen readers
+            or keyboard navigation. Buttons show clear hover and focus states,
+            so users get equal feedback whether they use a mouse or keyboard.
+            The site’s headings follow a logical order with one h1 per page,
+            making navigation simple for assistive technologies.
+            <br />
+            Forms use matching label and id attributes so that screen readers
+            correctly announce each field. When a form is submitted, aria-live
+            regions politely announce success or error messages without breaking
+            the flow. The About page’s accordion lets users reveal only what
+            they need, supporting focus and reducing scrolling. Responsive
+            design ensures the layout adjusts to mobile and desktop, keeping
+            text readable and touch areas large. Motion is automatically reduced
+            for users who prefer less animation, ensuring comfort for everyone.
+          </p>
+
+          <h3>2.2 Ethical Design Decisions</h3>
+          <p>
+            The ethics analysis from Work Phase 2 and ethical response from Work
+            Phase 3 exposed how collecting unnecessary personal data like
+            sexuality or income can cause harm, so this version of the website
+            takes the opposite approach. The join form only asks for a name and
+            email, with optional message or photo uploads. This small change
+            protects privacy and prevents risks such as profiling, trust loss,
+            and security breaches. The discussion modal and event submission
+            forms follow the same idea, requesting only what’s essential. This
+            reflects the ACS principles of Trustworthiness and Respect for
+            Others by minimising harm and building user confidence.
+            <br />
+            Transparency runs through every detail. Required fields are clearly
+            marked with both visual indicators and screen-reader labels. Help
+            text gives short, precise guidance such as “Max file size 10 MB” or
+            “Use 24-hour time.” When users make a mistake, the form tells them
+            exactly what needs fixing instead of showing a vague error. This
+            clarity builds trust and makes forms faster to use.
+          </p>
+        </section>
+
+        <!-- SECTION 3: VARIATIONS FROM A3 DESIGN PROPOSAL -->
+        <section id="variations" class="section">
+          <h2>3. Variations from A3 Design Proposal</h2>
+          <p>
+            The final implementation focuses on five key pages instead of
+            building the full site map proposed in A3. This decision allowed me
+            to give proper attention to accessibility, responsiveness, and
+            dynamic functionality within the A4 assignment scope. The chosen
+            pages were Home, About, Join, Connect, and Events page. These pages
+            cover all required interaction types. Home provides an entry point,
+            About acts as a static content page with an accordion structure,
+            Join demonstrates accessible form validation and API submission,
+            Connect shows dynamic content updates through the DECO API, and
+            Events blends static cards with a submission form to showcase
+            multiple interaction styles.
+            <br />
+            The A3 proposal included extra pages like Resources and
+            Opportunities, but they would have repeated the same kind of
+            functionality seen in Connect, adding little value while dividing
+            focus. By limiting the site to five pages, the final implementation
+            demonstrates all the skills I have learned throughout the semester.
+            <br />
+            During development, the IBM accessibility audit revealed colour
+            contrast issues that would have failed WCAG 2.2 Level AA standards.
+            The lighter grey text proposed in A3 made some content hard to read,
+            especially member and event metadata. To fix this, I replaced all
+            light grey elements with the darker primary text colour used
+            throughout the site. This improved readability on pages like Join,
+            Connect, and Events, while the About page also benefited through
+            clearer metadata labels. Instead of selectively adjusting colours,
+            the fix was applied across the entire CSS system to ensure
+            consistency. The result maintains the visual hierarchy through font
+            size and weight, proving that accessibility improvements can
+            strengthen design without changing its overall aesthetic.
+            Additionally, the blue colour had to be changed to a darker shade to
+            meet contrast requirements. This led to a variation from the
+            original proposed colour scheme. The darker blue allowed for better
+            readability of the white text.
+          </p>
+        </section>
+
+        <!-- SECTION 4: CHALLENGES AND STRATEGIES -->
+        <section id="challenges" class="section">
+          <h2>4. Challenges and Strategies</h2>
+
+          <h3>Challenge 1: API Integration</h3>
+          <p>
+            Deciding which API is suitable for my use case and integrating it
+            was a challenging task. As most of the API endpoints mentioned in
+            the documentation were generic, I had to experiment with different
+            endpoints to find the ones that best fit my requirements. Debugging
+            involved extensive console logging to identify whether issues
+            stemmed from incorrect endpoints, malformed data, or missing
+            authentication.
+          </p>
+
+          <h3>Challenge 2: Responsive Design Across Devices</h3>
+          <p>
+            Browser window resizing revealed layout breaks where content
+            overflowed containers or navigation elements overlapped at certain
+            viewport widths between mobile and desktop breakpoints. The mobile
+            bottom navigation sometimes conflicted with desktop top navigation
+            during transitions, creating doubled menus momentarily. I addressed
+            this by implementing a single clean breakpoint at 768px using
+            display: none to completely hide one navigation version while
+            showing the other.
+          </p>
+
+          <h3>Challenge 3: Accessibility Implementation</h3>
+          <p>
+            The initial accessibility audit revealed several issues that needed
+            to be addressed to meet WCAG 2.2 Level AA standards. The contrast
+            ratios for text and interactive elements were insufficient, making
+            it difficult for users with visual impairments to read content and
+            navigate the site effectively. Rather than adjusting each instance
+            individually, I systematically removed the problematic
+            --color-text-light variable from the entire CSS architecture,
+            replacing all occurrences with the properly contrasting
+            --color-text. Additionally, using a darker shade for my primary and
+            secondary blue colour addressed many violations discovered in the
+            initial audit.
+          </p>
+        </section>
+
+        <!-- SECTION 5: ACCESSIBILITY AUDIT RESULTS -->
+        <section id="audit" class="section">
+          <h2>5. Accessibility Audit Results</h2>
+
+          <h3>IBM Equal Access Accessibility Checker Report</h3>
+          <p>
+            The website underwent accessibility testing using the IBM Equal
+            Access Accessibility Checker browser extension at two stages—before
+            and after implementing contrast fixes. The comparison demonstrates
+            the significant improvements made to ensure WCAG 2.2 Level AA
+            compliance.
+          </p>
+
+          <div class="audit-comparison">
+            <h4>About Us Page</h4>
+            <figure>
+              <img
+                src="assets/accessibility/before/about.png"
+                alt="Initial accessibility audit showing violations before color contrast fixes"
+              />
+              <figcaption>Figure 1 (Before)</figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="assets/accessibility/after/about.png"
+                alt="Final accessibility audit showing improved compliance after implementing fixes"
+              />
+              <figcaption>Figure 2 (After)</figcaption>
+            </figure>
+
+            <h4>Home Page</h4>
+            <figure>
+              <img
+                src="assets/accessibility/before/home.png"
+                alt="Initial accessibility audit showing violations before color contrast fixes"
+              />
+              <figcaption>Figure 3 (Before)</figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="assets/accessibility/after/home.png"
+                alt="Final accessibility audit showing improved compliance after implementing fixes"
+              />
+              <figcaption>Figure 4 (After)</figcaption>
+            </figure>
+            <h4>Connect Page</h4>
+            <figure>
+              <img
+                src="assets/accessibility/before/connect.png"
+                alt="Initial accessibility audit showing violations before color contrast fixes"
+              />
+              <figcaption>Figure 5 (Before)</figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="assets/accessibility/after/connect.png"
+                alt="Final accessibility audit showing improved compliance after implementing fixes"
+              />
+              <figcaption>Figure 6 (After)</figcaption>
+            </figure>
+            <h4>Events Page</h4>
+            <figure>
+              <img
+                src="assets/accessibility/before/events.png"
+                alt="Initial accessibility audit showing violations before color contrast fixes"
+              />
+              <figcaption>Figure 7 (Before)</figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="assets/accessibility/after/events.png"
+                alt="Final accessibility audit showing improved compliance after implementing fixes"
+              />
+              <figcaption>Figure 8 (After)</figcaption>
+            </figure>
+            <h4>Join Page</h4>
+            <figure>
+              <img
+                src="assets/accessibility/before/join.png"
+                alt="Initial accessibility audit showing violations before color contrast fixes"
+              />
+              <figcaption>Figure 9 (Before)</figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="assets/accessibility/after/join.png"
+                alt="Final accessibility audit showing improved compliance after implementing fixes"
+              />
+              <figcaption>Figure 10 (After)</figcaption>
+            </figure>
+          </div>
+
+          <h3>Reflection on Audit Results</h3>
+          <p>
+            The accessibility audit showed me that most accessibility issues
+            don’t come from big design flaws but from small choices that add up.
+            For example, using a lighter grey for secondary text looked fine at
+            first, but in practice it made things harder to read for people with
+            visual impairments who rely on strong contrast. It reminded me of
+            Ahmed’s user story about struggling with websites that weren’t built
+            with proper structure or labels. Instead of fixing each issue one by
+            one, I removed the problematic colour variable entirely from the
+            CSS, which turned out to be a much cleaner and more reliable
+            solution. What stood out to me most was how much this process
+            changed my perspective about how something can appear accessible at
+            a glance but still fail real users once you test it properly.
+          </p>
+        </section>
+
+        <!-- SECTION 6: GITHUB REPOSITORY -->
+        <section id="github" class="section">
+          <h2>6. GitHub Repository</h2>
+          <div class="m-y-4">
+            <p>
+              The complete source code for the Global Community Connect website
+              is available on GitHub:
+              <a href="https://github.com/AnshulDadhwal/deco7140_development">
+                https://github.com/AnshulDadhwal/deco7140_development
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <!-- Navigation Links -->
+        <section class="section m-t-7">
+          <h2>Related Documentation</h2>
+          <ul>
+            <li>
+              <a href="genai_mt_acknowledgement.html"
+                >GenAI/MT Acknowledgement</a
+              >
+            </li>
+            <li><a href="index.html">Return to Website Home</a></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
